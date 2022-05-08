@@ -8,3 +8,14 @@
 - Integração com o Google Maps para localizar o posto de saúde mais próximo de sua residência.
 - Calendário com as datas de vacinação.
 - Guias práticos e de fácil leitura para os nossos usuários.
+
+## Tecnologias utilizadas para o desenvolvimento desse projeto
+- Java
+- Figma
+- MySQL
+- Google Maps
+
+## Problemas que encontramos durante a construção do nosso projeto
+- Responsividade em Java Swing
+- Integração do Java com o Banco de Dados
+- Otimização de algoritmo e boas práticas de programação.
