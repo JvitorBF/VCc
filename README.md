@@ -10,12 +10,13 @@
 - Guias práticos e de fácil leitura para os nossos usuários.
 
 ## Tecnologias utilizadas para o desenvolvimento desse projeto
-- Java
-- Figma
-- MySQL
-- Google Maps
+- Java.
+- Figma.
+- MySQL.
+- Google Maps.
 
 ## Problemas que encontramos durante a construção do nosso projeto
-- Responsividade em Java Swing
-- Integração do Java com o Banco de Dados
+- Responsividade em Java Swing.
+- Integração do Java com o Banco de Dados.
 - Otimização de algoritmo e boas práticas de programação.
+- Integração com redes sociais e Google Maps.
