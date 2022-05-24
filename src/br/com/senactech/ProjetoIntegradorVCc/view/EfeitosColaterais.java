@@ -28,14 +28,14 @@ public class EfeitosColaterais extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel6 = new javax.swing.JPanel();
-        jButton6 = new javax.swing.JButton();
+        BotaoVoltar = new javax.swing.JButton();
         jSeparator6 = new javax.swing.JSeparator();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
+        jLabelTitulo = new javax.swing.JLabel();
+        jLabelParagrafo = new javax.swing.JLabel();
+        botaoAjuda = new javax.swing.JButton();
+        botaoLocaisVacinacao = new javax.swing.JButton();
+        botaoInstrucoes = new javax.swing.JButton();
+        botaoCalendario = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator4 = new javax.swing.JSeparator();
@@ -47,25 +47,25 @@ public class EfeitosColaterais extends javax.swing.JFrame {
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
 
-        jButton6.setBackground(new java.awt.Color(38, 135, 68));
-        jButton6.setForeground(new java.awt.Color(255, 255, 255));
-        jButton6.setText("Voltar");
-        jButton6.setFocusable(false);
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        BotaoVoltar.setBackground(new java.awt.Color(38, 135, 68));
+        BotaoVoltar.setForeground(new java.awt.Color(255, 255, 255));
+        BotaoVoltar.setText("Voltar");
+        BotaoVoltar.setFocusable(false);
+        BotaoVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                BotaoVoltarActionPerformed(evt);
             }
         });
 
         jSeparator6.setToolTipText("");
 
-        jLabel1.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel1.setText("<html><u>Efeitos Colaterais</u>");
+        jLabelTitulo.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
+        jLabelTitulo.setForeground(new java.awt.Color(0, 0, 0));
+        jLabelTitulo.setText("<html><u>Efeitos Colaterais</u>");
 
-        jLabel2.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("<html><p><h3>Efeitos colaterais comuns das vacinas COVID-19 </h3></p> "
+        jLabelParagrafo.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jLabelParagrafo.setForeground(new java.awt.Color(0, 0, 0));
+        jLabelParagrafo.setText("<html><p><h3>Efeitos colaterais comuns das vacinas COVID-19 </h3></p> "
             + "<p>As vacinas COVID-19 são seguras, e se vacinar ajudará "
             + "a protegê-lo contra o desenvolvimento de doença severa COVID-19 "
             + "e morrer de COVID-19.Você pode experimentar alguns efeitos colaterais "
@@ -81,41 +81,41 @@ public class EfeitosColaterais extends javax.swing.JFrame {
 
         );
 
-        jButton7.setBackground(new java.awt.Color(255, 255, 255));
-        jButton7.setForeground(new java.awt.Color(102, 102, 102));
-        jButton7.setText("Ajuda");
-        jButton7.setBorder(null);
-        jButton7.setBorderPainted(false);
-        jButton7.setContentAreaFilled(false);
-        jButton7.setFocusPainted(false);
-        jButton7.setFocusable(false);
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        botaoAjuda.setBackground(new java.awt.Color(255, 255, 255));
+        botaoAjuda.setForeground(new java.awt.Color(102, 102, 102));
+        botaoAjuda.setText("Ajuda");
+        botaoAjuda.setBorder(null);
+        botaoAjuda.setBorderPainted(false);
+        botaoAjuda.setContentAreaFilled(false);
+        botaoAjuda.setFocusPainted(false);
+        botaoAjuda.setFocusable(false);
+        botaoAjuda.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                botaoAjudaActionPerformed(evt);
             }
         });
 
-        jButton8.setForeground(new java.awt.Color(102, 102, 102));
-        jButton8.setText("Locais de vacinação");
-        jButton8.setBorder(null);
-        jButton8.setBorderPainted(false);
-        jButton8.setContentAreaFilled(false);
+        botaoLocaisVacinacao.setForeground(new java.awt.Color(102, 102, 102));
+        botaoLocaisVacinacao.setText("Locais de vacinação");
+        botaoLocaisVacinacao.setBorder(null);
+        botaoLocaisVacinacao.setBorderPainted(false);
+        botaoLocaisVacinacao.setContentAreaFilled(false);
 
-        jButton9.setForeground(new java.awt.Color(102, 102, 102));
-        jButton9.setText("Instruções");
-        jButton9.setBorder(null);
-        jButton9.setBorderPainted(false);
-        jButton9.setContentAreaFilled(false);
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
+        botaoInstrucoes.setForeground(new java.awt.Color(102, 102, 102));
+        botaoInstrucoes.setText("Instruções");
+        botaoInstrucoes.setBorder(null);
+        botaoInstrucoes.setBorderPainted(false);
+        botaoInstrucoes.setContentAreaFilled(false);
+        botaoInstrucoes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                botaoInstrucoesActionPerformed(evt);
             }
         });
 
-        jButton10.setForeground(new java.awt.Color(102, 102, 102));
-        jButton10.setText("Calendário");
-        jButton10.setBorderPainted(false);
-        jButton10.setContentAreaFilled(false);
+        botaoCalendario.setForeground(new java.awt.Color(102, 102, 102));
+        botaoCalendario.setText("Calendário");
+        botaoCalendario.setBorderPainted(false);
+        botaoCalendario.setContentAreaFilled(false);
 
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
@@ -133,31 +133,31 @@ public class EfeitosColaterais extends javax.swing.JFrame {
             .addComponent(jSeparator6)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(botaoCalendario, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton8)
+                .addComponent(botaoLocaisVacinacao)
                 .addGap(12, 12, 12)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton9)
+                .addComponent(botaoInstrucoes)
                 .addGap(12, 12, 12)
                 .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(botaoAjuda, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BotaoVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26))
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addGap(49, 49, 49)
-                .addComponent(jLabel1)
+                .addComponent(jLabelTitulo)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                 .addContainerGap(66, Short.MAX_VALUE)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 687, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabelParagrafo, javax.swing.GroupLayout.PREFERRED_SIZE, 687, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(44, 44, 44))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                         .addComponent(jLabel4)
@@ -170,11 +170,11 @@ public class EfeitosColaterais extends javax.swing.JFrame {
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addGap(16, 16, 16)
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(BotaoVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(botaoLocaisVacinacao, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(botaoAjuda, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(botaoInstrucoes, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(botaoCalendario, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(14, 14, 14))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                         .addContainerGap()
@@ -185,9 +185,9 @@ public class EfeitosColaterais extends javax.swing.JFrame {
                         .addGap(18, 18, 18)))
                 .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(66, 66, 66)
-                .addComponent(jLabel1)
+                .addComponent(jLabelTitulo)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 274, Short.MAX_VALUE)
+                .addComponent(jLabelParagrafo, javax.swing.GroupLayout.DEFAULT_SIZE, 274, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel4)
                 .addGap(32, 32, 32))
@@ -208,18 +208,18 @@ public class EfeitosColaterais extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+    private void botaoInstrucoesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoInstrucoesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton9ActionPerformed
+    }//GEN-LAST:event_botaoInstrucoesActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void botaoAjudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoAjudaActionPerformed
         // TODO add your handling code here:
 
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_botaoAjudaActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    private void BotaoVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoVoltarActionPerformed
+        // TODO add your handling code here;
+    }//GEN-LAST:event_BotaoVoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -258,14 +258,14 @@ public class EfeitosColaterais extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton BotaoVoltar;
+    private javax.swing.JButton botaoAjuda;
+    private javax.swing.JButton botaoCalendario;
+    private javax.swing.JButton botaoInstrucoes;
+    private javax.swing.JButton botaoLocaisVacinacao;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabelParagrafo;
+    private javax.swing.JLabel jLabelTitulo;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
