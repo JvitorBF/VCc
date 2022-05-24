@@ -5,11 +5,6 @@
  */
 package br.com.senactech.ProjetoIntegradorVCc.view;
 
-import java.awt.Graphics;
-import java.awt.Shape;
-import java.awt.geom.RoundRectangle2D;
-import javax.swing.JTextField;
-
 /**
  *
  * @author João Vitor
@@ -181,7 +176,10 @@ public class login extends javax.swing.JFrame {
         String senha;
         
         email = jtfEmail.getText();
-        senha = String.valueOf(jpfSenha.getPassword());        
+        senha = String.valueOf(jpfSenha.getPassword()); 
+        
+        System.out.println(email);
+        System.out.println(senha);
     }//GEN-LAST:event_jbEntrarActionPerformed
 
     /**
