@@ -7,6 +7,7 @@
     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
       <Color blue="ff" green="ff" red="ff" type="rgb"/>
     </Property>
+    <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -150,9 +151,6 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="SansSerif" size="24" style="1"/>
             </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
-            </Property>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
               <Connection code="&quot;&lt;html&gt;&lt;u&gt;O que levar ao local de vacina&#xe7;&#xe3;o?&lt;/u&gt;&quot;" type="code"/>
             </Property>
@@ -162,9 +160,6 @@
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="sansserif" size="14" style="0"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
               <Connection code="&quot;&lt;html&gt;&lt;h3&gt;Todas as pessoas ser&#xe3;o vacinadas&lt;/h3&gt;&lt;p&gt;Mesmo que n&#xe3;o apresentem algum documento. &quot;&#xa;    + &quot;Basta comprovar que pertence ao grupo priorit&#xe1;rio correspondente &#xe0; fase da vacina&#xe7;&#xe3;o.&quot;&#xa;    + &quot;No entanto, para fazer o controle, o Minist&#xe9;rio da Sa&#xfa;de diz que &#xe9; importante informar o n&#xfa;mero do &quot;&#xa;    + &quot;CPF ou apresentar o Cart&#xe3;o Nacional de Sa&#xfa;de (CNS) &#x2013; o Cart&#xe3;o do SUS.&lt;/p&gt;&quot;&#xa;    + &quot;&lt;ol&gt;&quot;&#xa;    + &quot;&lt;li&gt; Identidade;&lt;/li&gt;&quot;&#xa;    + &quot;&lt;li&gt; Cart&#xe3;o SUS;&lt;/li&gt;&quot;&#xa;    + &quot;&lt;li&gt; Caso for a segunda ou mais doses, levar carteira de vacina&#xe7;&#xe3;o.&lt;/li&gt;&quot;&#xa;    + &quot;&lt;/ol&gt;&quot;&#xa;&#xa;    " type="code"/>

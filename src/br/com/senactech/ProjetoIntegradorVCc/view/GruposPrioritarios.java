@@ -44,6 +44,7 @@ public class GruposPrioritarios extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Efeitos Colaterais");
         setBackground(new java.awt.Color(255, 255, 255));
+        setResizable(false);
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -60,11 +61,9 @@ public class GruposPrioritarios extends javax.swing.JFrame {
         jSeparator6.setToolTipText("");
 
         jLabel1.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("<html><u>Grupos Prioritários</u>");
 
         jLabel2.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("<html><h3>Efeitos colaterais comuns das vacinas COVID-19 </h3> "
             + "<p>As vacinas COVID-19 são seguras, e se vacinar ajudará "
             + "a protegê-lo contra o desenvolvimento de doença severa COVID-19 "

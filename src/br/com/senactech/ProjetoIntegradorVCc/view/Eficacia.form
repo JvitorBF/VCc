@@ -7,6 +7,7 @@
     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
       <Color blue="ff" green="ff" red="ff" type="rgb"/>
     </Property>
+    <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -145,9 +146,6 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="SansSerif" size="24" style="1"/>
             </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
-            </Property>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
               <Connection code="&quot;&lt;html&gt;&lt;u&gt;Efic&#xe1;cia&lt;/u&gt;&quot;" type="code"/>
             </Property>
@@ -157,9 +155,6 @@
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="sansserif" size="14" style="0"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
               <Connection code="&quot;&lt;html&gt;&lt;p&gt;Meses ap&#xf3;s o in&#xed;cio da vacina&#xe7;&#xe3;o contra o coronav&#xed;rus, a diferen&#xe7;a que os imunizantes fazem na vida real&quot;&#xa;                + &quot;est&#xe1; ficando mais clara, cada vacina tem sua efic&#xe1;cia, como a vacina da Pfizer BioNTech contra a COVID-19&quot;&#xa;                + &quot;tem uma efic&#xe1;cia de 95% contra a infe&#xe7;&#xe3;o sintom&#xe1;tica por SARS-CoV-2, j&#xe1; a vacina AstraZeneca contra a&quot;&#xa;                + &quot;COVID-19 tem uma efic&#xe1;cia de 63,09% contra a infe&#xe7;&#xe3;o sintom&#xe1;tica pelo SARS-CoV-2.&quot;&#xa;                + &quot;Intervalos mais longos entre as doses, com limites de 8 a 12 semanas, est&#xe3;o associados  a uma maior efic&#xe1;cia&quot;&#xa;                + &quot;da vacina. E a CoronaVac tem umas das menores taxas de efic&#xe1;cia, a efic&#xe1;cia geral da CoronaVac &#xe9; 50,38%,&quot;&#xa;                + &quot;ou seja, os vacinados t&#xea;m 50,38% menos risco de adoecer.&quot;&#xa;                + &quot;Dados iniciais mostravam que, caso a pessoa seja infectada por covid-19, a vacina oferece 100% de efic&#xe1;cia&quot;&#xa;                + &quot;para n&#xe3;o adoecer gravemente e 78% para prevenir casos leves.&quot;&#xa;                + &quot;Isso s&#xe3;o a efic&#xe1;cia de somente tr&#xea;s vacinas, temos outras como Moderna, Sputnik V, e Janssen que todas tem&quot;&#xa;                + &quot;grande efic&#xe1;cia tamb&#xe9;m. As vacinas s&#xe3;o muito importantes, pois previne e salva muitas vidas, e desde que&quot;&#xa;                + &quot;a OMS declarou a pandemia do novo coronav&#xed;rus, em mar&#xe7;o de 2020, laborat&#xf3;rios e pesquisadores se empenhara&quot;&#xa;                + &quot;para descobrir vacinas contra a covid-19 e atualmente temos muitas vacinas com grande efic&#xe1;cia ao covid-19,&quot;&#xa;                + &quot;por isso todos devemos tomar a vacina.  &lt;/p&gt;&quot;&#xa;&#xa;    " type="code"/>
