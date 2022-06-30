@@ -44,6 +44,7 @@ public class OqLevarLocalDeVacinacao extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Efeitos Colaterais");
         setBackground(new java.awt.Color(255, 255, 255));
+        setResizable(false);
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -60,11 +61,9 @@ public class OqLevarLocalDeVacinacao extends javax.swing.JFrame {
         jSeparator6.setToolTipText("");
 
         jLabelTitulo.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
-        jLabelTitulo.setForeground(new java.awt.Color(0, 0, 0));
         jLabelTitulo.setText("<html><u>O que levar ao local de vacinação?</u>");
 
         jLabelParagrafo.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jLabelParagrafo.setForeground(new java.awt.Color(0, 0, 0));
         jLabelParagrafo.setText("<html><h3>Todas as pessoas serão vacinadas</h3><p>Mesmo que não apresentem algum documento. "
             + "Basta comprovar que pertence ao grupo prioritário correspondente à fase da vacinação."
             + "No entanto, para fazer o controle, o Ministério da Saúde diz que é importante informar o número do "

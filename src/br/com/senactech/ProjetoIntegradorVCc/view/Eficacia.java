@@ -44,6 +44,7 @@ public class Eficacia extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Eficácia");
         setBackground(new java.awt.Color(255, 255, 255));
+        setResizable(false);
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -60,11 +61,9 @@ public class Eficacia extends javax.swing.JFrame {
         jSeparator6.setToolTipText("");
 
         jLabelTitulo.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
-        jLabelTitulo.setForeground(new java.awt.Color(0, 0, 0));
         jLabelTitulo.setText("<html><u>Eficácia</u>");
 
         jLabelParagrafo.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jLabelParagrafo.setForeground(new java.awt.Color(0, 0, 0));
         jLabelParagrafo.setText("<html><p>Meses após o início da vacinação contra o coronavírus, a diferença que os imunizantes fazem na vida real"
             + "está ficando mais clara, cada vacina tem sua eficácia, como a vacina da Pfizer BioNTech contra a COVID-19"
             + "tem uma eficácia de 95% contra a infeção sintomática por SARS-CoV-2, já a vacina AstraZeneca contra a"

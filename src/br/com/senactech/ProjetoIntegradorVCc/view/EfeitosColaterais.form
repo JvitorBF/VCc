@@ -7,6 +7,7 @@
     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
       <Color blue="ff" green="ff" red="ff" type="rgb"/>
     </Property>
+    <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -150,9 +151,6 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="SansSerif" size="24" style="1"/>
             </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
-            </Property>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
               <Connection code="&quot;&lt;html&gt;&lt;u&gt;Efeitos Colaterais&lt;/u&gt;&quot;" type="code"/>
             </Property>
@@ -162,9 +160,6 @@
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="sansserif" size="14" style="0"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
               <Connection code="&quot;&lt;html&gt;&lt;p&gt;&lt;h3&gt;Efeitos colaterais comuns das vacinas COVID-19 &lt;/h3&gt;&lt;/p&gt; &quot;&#xa;    + &quot;&lt;p&gt;As vacinas COVID-19 s&#xe3;o seguras, e se vacinar ajudar&#xe1; &quot;&#xa;    + &quot;a proteg&#xea;-lo contra o desenvolvimento de doen&#xe7;a severa COVID-19 &quot;&#xa;    + &quot;e morrer de COVID-19.Voc&#xea; pode experimentar alguns efeitos colaterais &quot;&#xa;    + &quot;leves depois de se vacinar, que s&#xe3;o sinais de que seu corpo est&#xe1; construindo prote&#xe7;&#xe3;o.&lt;/p&gt; &quot;&#xa;    + &quot;&lt;p&gt;Como qualquer vacina, a vacina COVID-19 pode causar efeitos colaterais, &quot;&#xa;    + &quot; a maioria dos quais s&#xe3;o leves ou moderados e ir&#xe3;o embora por conta pr&#xf3;pria em alguns dias.&quot;&#xa;    + &quot; Conforme demonstrado pelos resultados dos ensaios cl&#xed;nicos, podem ocorrer efeitos colaterais &quot;&#xa;    + &quot; mais graves ou de longa dura&#xe7;&#xe3;o. A vacina &#xe9; monitorada continuamente para detectar eventos adversos.&quot;&#xa;    + &quot;De acordo com relat&#xf3;rios, a maioria dos efeitos colaterais da vacina COVID-19 s&#xe3;o leves a moderados e &quot;&#xa;    + &quot;n&#xe3;o duram mais do que alguns dias. Os efeitos colaterais t&#xed;picos incluem dor no local da inje&#xe7;&#xe3;o, febre, &quot;&#xa;    + &quot; fadiga, dor de cabe&#xe7;a, dor muscular, calafrios e diarreia. A chance de qualquer um desses efeitos colaterais &quot;&#xa;    + &quot; ap&#xf3;s a vacina&#xe7;&#xe3;o varia de acordo com a vacina espec&#xed;fica.A vacina COVID-19 s&#xf3; pode prevenir o v&#xed;rus SARS-CoV-2, portanto, manter a sa&#xfa;de ainda &#xe9; importante.&lt;/p&gt;&quot;&#xa;    &#xa;    " type="code"/>
