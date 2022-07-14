@@ -32,6 +32,10 @@ public class Registro extends javax.swing.JFrame {
         jtfEmail1 = new javax.swing.JTextField();
         jtfEmail2 = new javax.swing.JTextField();
         jlEmail1 = new javax.swing.JLabel();
+        jtfNome1 = new javax.swing.JTextField();
+        jtfNome2 = new javax.swing.JTextField();
+        jtfNome4 = new javax.swing.JTextField();
+        buttonGroup2 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
@@ -41,9 +45,20 @@ public class Registro extends javax.swing.JFrame {
         jpfSenha = new javax.swing.JPasswordField();
         jlEmail = new javax.swing.JLabel();
         jlSenha = new javax.swing.JLabel();
-        jlRegistrar = new javax.swing.JLabel();
         jtfNome = new javax.swing.JTextField();
         jlEmail2 = new javax.swing.JLabel();
+        jFormattedTextField1 = new javax.swing.JFormattedTextField();
+        jFormattedTextField2 = new javax.swing.JFormattedTextField();
+        jlEmail3 = new javax.swing.JLabel();
+        jtfNome3 = new javax.swing.JTextField();
+        jlEmail4 = new javax.swing.JLabel();
+        jFormattedTextField3 = new javax.swing.JFormattedTextField();
+        jlEmail5 = new javax.swing.JLabel();
+        jlSenha1 = new javax.swing.JLabel();
+        jRBAtivo = new javax.swing.JRadioButton();
+        jRBInativo = new javax.swing.JRadioButton();
+        jButton1 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
 
         jtfEmail1.setBackground(new java.awt.Color(255, 255, 255));
         jtfEmail1.setForeground(new java.awt.Color(120, 116, 109));
@@ -59,6 +74,39 @@ public class Registro extends javax.swing.JFrame {
 
         jlEmail1.setForeground(new java.awt.Color(120, 116, 109));
         jlEmail1.setText("Email");
+
+        jtfNome1.setBackground(new java.awt.Color(255, 255, 255));
+        jtfNome1.setForeground(new java.awt.Color(120, 116, 109));
+        jtfNome1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        jtfNome1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jtfNome1.setMargin(new java.awt.Insets(0, 5, 0, 0));
+        jtfNome1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtfNome1KeyTyped(evt);
+            }
+        });
+
+        jtfNome2.setBackground(new java.awt.Color(255, 255, 255));
+        jtfNome2.setForeground(new java.awt.Color(120, 116, 109));
+        jtfNome2.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        jtfNome2.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jtfNome2.setMargin(new java.awt.Insets(0, 5, 0, 0));
+        jtfNome2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtfNome2KeyTyped(evt);
+            }
+        });
+
+        jtfNome4.setBackground(new java.awt.Color(255, 255, 255));
+        jtfNome4.setForeground(new java.awt.Color(120, 116, 109));
+        jtfNome4.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        jtfNome4.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jtfNome4.setMargin(new java.awt.Insets(0, 5, 0, 0));
+        jtfNome4.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtfNome4KeyTyped(evt);
+            }
+        });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela de LogIn");
@@ -129,11 +177,7 @@ public class Registro extends javax.swing.JFrame {
         jlEmail.setText("Email");
 
         jlSenha.setForeground(new java.awt.Color(120, 116, 109));
-        jlSenha.setText("Senha");
-
-        jlRegistrar.setForeground(new java.awt.Color(120, 116, 109));
-        jlRegistrar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jlRegistrar.setText("Login");
+        jlSenha.setText("Endereço");
 
         jtfNome.setBackground(new java.awt.Color(255, 255, 255));
         jtfNome.setForeground(new java.awt.Color(120, 116, 109));
@@ -149,6 +193,69 @@ public class Registro extends javax.swing.JFrame {
         jlEmail2.setForeground(new java.awt.Color(120, 116, 109));
         jlEmail2.setText("Nome");
 
+        jFormattedTextField1.setBackground(new java.awt.Color(255, 255, 255));
+
+        jFormattedTextField2.setBackground(new java.awt.Color(255, 255, 255));
+        try {
+            jFormattedTextField2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##) ####-####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+
+        jlEmail3.setForeground(new java.awt.Color(120, 116, 109));
+        jlEmail3.setText("Cpf");
+
+        jtfNome3.setBackground(new java.awt.Color(255, 255, 255));
+        jtfNome3.setForeground(new java.awt.Color(120, 116, 109));
+        jtfNome3.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        jtfNome3.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jtfNome3.setMargin(new java.awt.Insets(0, 5, 0, 0));
+        jtfNome3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtfNome3ActionPerformed(evt);
+            }
+        });
+        jtfNome3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtfNome3KeyTyped(evt);
+            }
+        });
+
+        jlEmail4.setForeground(new java.awt.Color(120, 116, 109));
+        jlEmail4.setText("Telefone");
+
+        jFormattedTextField3.setBackground(new java.awt.Color(255, 255, 255));
+        try {
+            jFormattedTextField3.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+
+        jlEmail5.setForeground(new java.awt.Color(120, 116, 109));
+        jlEmail5.setText("Cep");
+
+        jlSenha1.setForeground(new java.awt.Color(120, 116, 109));
+        jlSenha1.setText("Senha");
+
+        jRBAtivo.setBackground(new java.awt.Color(204, 204, 204));
+        buttonGroup2.add(jRBAtivo);
+        jRBAtivo.setForeground(new java.awt.Color(120, 116, 109));
+        jRBAtivo.setText("Ativo");
+
+        jRBInativo.setBackground(new java.awt.Color(204, 204, 204));
+        buttonGroup2.add(jRBInativo);
+        jRBInativo.setForeground(new java.awt.Color(120, 116, 109));
+        jRBInativo.setText("Inativo");
+
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setForeground(new java.awt.Color(120, 116, 109));
+        jButton1.setText("Login");
+        jButton1.setBorderPainted(false);
+        jButton1.setContentAreaFilled(false);
+
+        jLabel3.setForeground(new java.awt.Color(120, 116, 109));
+        jLabel3.setText("Status");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -161,18 +268,37 @@ public class Registro extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(42, 42, 42)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jlRegistrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jlEmail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(283, 283, 283))
                             .addComponent(jbEntrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jtfEmail, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jpfSenha, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jlSenha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(278, 278, 278))
-                            .addComponent(jtfNome)
-                            .addComponent(jlEmail2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(jlSenha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jlEmail2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jFormattedTextField1, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jtfEmail, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jpfSenha, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jtfNome3, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jlEmail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jlSenha1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 305, Short.MAX_VALUE))
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jlEmail3, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addGap(151, 151, 151)
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(jlEmail5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 305, Short.MAX_VALUE)
+                                            .addComponent(jlEmail4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addGap(9, 9, 9)
+                                                .addComponent(jRBAtivo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(jRBInativo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(jFormattedTextField3, javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jtfNome, javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jFormattedTextField2, javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(38, 38, 38)))
                 .addContainerGap())
         );
@@ -181,23 +307,47 @@ public class Registro extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(0, 0, 0)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
-                .addComponent(jlEmail2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlEmail2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlEmail4, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jtfNome, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jtfNome3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jFormattedTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jlEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlEmail5, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jtfEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jtfEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfNome, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jlSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jlEmail3, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlSenha1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jpfSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jpfSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jFormattedTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addComponent(jlSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel3)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jRBAtivo)
+                    .addComponent(jRBInativo))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
                 .addComponent(jbEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jlRegistrar)
-                .addGap(50, 50, 50))
+                .addGap(18, 18, 18)
+                .addComponent(jButton1)
+                .addGap(32, 32, 32))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -269,6 +419,26 @@ public class Registro extends javax.swing.JFrame {
    
     }//GEN-LAST:event_jtfEmailKeyTyped
 
+    private void jtfNome1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNome1KeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfNome1KeyTyped
+
+    private void jtfNome2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNome2KeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfNome2KeyTyped
+
+    private void jtfNome3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNome3KeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfNome3KeyTyped
+
+    private void jtfNome3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfNome3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfNome3ActionPerformed
+
+    private void jtfNome4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNome4KeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfNome4KeyTyped
+
     /**
      * @param args the command line arguments
      */
@@ -312,20 +482,35 @@ public class Registro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JFormattedTextField jFormattedTextField1;
+    private javax.swing.JFormattedTextField jFormattedTextField2;
+    private javax.swing.JFormattedTextField jFormattedTextField3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JRadioButton jRBAtivo;
+    private javax.swing.JRadioButton jRBInativo;
     private javax.swing.JButton jbEntrar;
     private javax.swing.JLabel jlEmail;
     private javax.swing.JLabel jlEmail1;
     private javax.swing.JLabel jlEmail2;
-    private javax.swing.JLabel jlRegistrar;
+    private javax.swing.JLabel jlEmail3;
+    private javax.swing.JLabel jlEmail4;
+    private javax.swing.JLabel jlEmail5;
     private javax.swing.JLabel jlSenha;
+    private javax.swing.JLabel jlSenha1;
     private javax.swing.JPasswordField jpfSenha;
     private javax.swing.JTextField jtfEmail;
     private javax.swing.JTextField jtfEmail1;
     private javax.swing.JTextField jtfEmail2;
     private javax.swing.JTextField jtfNome;
+    private javax.swing.JTextField jtfNome1;
+    private javax.swing.JTextField jtfNome2;
+    private javax.swing.JTextField jtfNome3;
+    private javax.swing.JTextField jtfNome4;
     // End of variables declaration//GEN-END:variables
 }
