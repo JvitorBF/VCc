@@ -20,26 +20,41 @@ em que alguém for executar o script, ele estará desatualizado.*/
 # 'DROP TABLE nome_tabela' = exclui a tabela inteira
 # 'DELETE from nome_tabela' = assim eclui todas as linhas da tabela
 
+/*private int idUsuario;
+    private boolean status;
+    private String endereco;
+    private String nome;
+    private String telefone;
+    private String email;
+    private String cep;
+    private String cpf;
+    private String senha;*/
 
 use devm211vcc;
 
 create table usuario (
 	id int primary key auto_increment,
     nome varchar(60),
+    telefone varchar(12) not null,
     email varchar(60) not null, 
+    cpf varchar(11) not null unique,
+    cep varchar(9) not null,
+    endereco varchar(120) not null,    
     senha varchar(120) not null,
-    cpf varchar(11) not null unique
+    status boolean      
 );
 
-INSERT INTO usuario (id, nome, email, senha, cpf) VALUES (
+INSERT INTO usuario (id, nome, telefone, email, cpf, cep, endereco, senha, status) VALUES (
 	null,
     'João Vitor',
+    '51999919750',
     'jvitorbf35@gmail.com',
+    '05380419003',
+    '92990000',
+    'conzatti 459',
     'abc123',
-    '05380419003'
+	true
 );	
 
 /* ADICIONEM O LOGIN DE VOCÊS */
-
-
 
