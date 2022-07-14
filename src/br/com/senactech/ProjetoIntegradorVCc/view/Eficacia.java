@@ -9,12 +9,12 @@ package br.com.senactech.ProjetoIntegradorVCc.view;
  *
  * @author faria
  */
-public class EfeitosColaterais extends javax.swing.JFrame {
+public class Eficacia extends javax.swing.JFrame {
 
     /**
      * Creates new form GruposPrioritarios
      */
-    public EfeitosColaterais() {
+    public Eficacia() {
         initComponents();
     }
 
@@ -42,7 +42,7 @@ public class EfeitosColaterais extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Efeitos Colaterais");
+        setTitle("Eficácia");
         setBackground(new java.awt.Color(255, 255, 255));
         setResizable(false);
 
@@ -61,22 +61,23 @@ public class EfeitosColaterais extends javax.swing.JFrame {
         jSeparator6.setToolTipText("");
 
         jLabelTitulo.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
-        jLabelTitulo.setText("<html><u>Efeitos Colaterais</u>");
+        jLabelTitulo.setText("<html><u>Eficácia</u>");
 
         jLabelParagrafo.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jLabelParagrafo.setText("<html><p><h3>Efeitos colaterais comuns das vacinas COVID-19 </h3></p> "
-            + "<p>As vacinas COVID-19 são seguras, e se vacinar ajudará "
-            + "a protegê-lo contra o desenvolvimento de doença severa COVID-19 "
-            + "e morrer de COVID-19.Você pode experimentar alguns efeitos colaterais "
-            + "leves depois de se vacinar, que são sinais de que seu corpo está construindo proteção.</p> "
-            + "<p>Como qualquer vacina, a vacina COVID-19 pode causar efeitos colaterais, "
-            + " a maioria dos quais são leves ou moderados e irão embora por conta própria em alguns dias."
-            + " Conforme demonstrado pelos resultados dos ensaios clínicos, podem ocorrer efeitos colaterais "
-            + " mais graves ou de longa duração. A vacina é monitorada continuamente para detectar eventos adversos."
-            + "De acordo com relatórios, a maioria dos efeitos colaterais da vacina COVID-19 são leves a moderados e "
-            + "não duram mais do que alguns dias. Os efeitos colaterais típicos incluem dor no local da injeção, febre, "
-            + " fadiga, dor de cabeça, dor muscular, calafrios e diarreia. A chance de qualquer um desses efeitos colaterais "
-            + " após a vacinação varia de acordo com a vacina específica.A vacina COVID-19 só pode prevenir o vírus SARS-CoV-2, portanto, manter a saúde ainda é importante.</p>"
+        jLabelParagrafo.setText("<html><p>Meses após o início da vacinação contra o coronavírus, a diferença que os imunizantes fazem na vida real"
+            + "está ficando mais clara, cada vacina tem sua eficácia, como a vacina da Pfizer BioNTech contra a COVID-19"
+            + "tem uma eficácia de 95% contra a infeção sintomática por SARS-CoV-2, já a vacina AstraZeneca contra a"
+            + "COVID-19 tem uma eficácia de 63,09% contra a infeção sintomática pelo SARS-CoV-2."
+            + "Intervalos mais longos entre as doses, com limites de 8 a 12 semanas, estão associados  a uma maior eficácia"
+            + "da vacina. E a CoronaVac tem umas das menores taxas de eficácia, a eficácia geral da CoronaVac é 50,38%,"
+            + "ou seja, os vacinados têm 50,38% menos risco de adoecer."
+            + "Dados iniciais mostravam que, caso a pessoa seja infectada por covid-19, a vacina oferece 100% de eficácia"
+            + "para não adoecer gravemente e 78% para prevenir casos leves."
+            + "Isso são a eficácia de somente três vacinas, temos outras como Moderna, Sputnik V, e Janssen que todas tem"
+            + "grande eficácia também. As vacinas são muito importantes, pois previne e salva muitas vidas, e desde que"
+            + "a OMS declarou a pandemia do novo coronavírus, em março de 2020, laboratórios e pesquisadores se empenhara"
+            + "para descobrir vacinas contra a covid-19 e atualmente temos muitas vacinas com grande eficácia ao covid-19,"
+            + "por isso todos devemos tomar a vacina.  </p>"
 
         );
 
@@ -123,7 +124,7 @@ public class EfeitosColaterais extends javax.swing.JFrame {
         jSeparator4.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
         jLabel4.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
-        jLabel4.setText("© 2021 WHO");
+        jLabel4.setText("© 2021 WHO - Todos os direitos reservados");
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -154,13 +155,10 @@ public class EfeitosColaterais extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                 .addContainerGap(66, Short.MAX_VALUE)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                        .addComponent(jLabelParagrafo, javax.swing.GroupLayout.PREFERRED_SIZE, 687, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(44, 44, 44))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addGap(72, 72, 72))))
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabelParagrafo, javax.swing.GroupLayout.PREFERRED_SIZE, 687, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(44, 44, 44))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -237,14 +235,18 @@ public class EfeitosColaterais extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(EfeitosColaterais.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Eficacia.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(EfeitosColaterais.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Eficacia.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(EfeitosColaterais.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Eficacia.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(EfeitosColaterais.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Eficacia.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -253,7 +255,7 @@ public class EfeitosColaterais extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new EfeitosColaterais().setVisible(true);
+                new Eficacia().setVisible(true);
             }
         });
     }

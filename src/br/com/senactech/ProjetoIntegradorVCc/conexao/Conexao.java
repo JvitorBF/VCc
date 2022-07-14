@@ -34,10 +34,9 @@ public class Conexao {
         } catch (SQLException e) {
             throw new SQLException("Erro ao conectar! \n" + e.getMessage());
         }
-
         return c;
     }
-
+    
     public static void closeConnection(Connection con) throws SQLException {
         try {
             if (con != null) {
@@ -69,5 +68,4 @@ public class Conexao {
             throw new SQLException("Erro ao fechar a conexão com o Banco de Dados");
         }
     }
-
 }

@@ -44,6 +44,7 @@ public class GruposPrioritarios extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Efeitos Colaterais");
         setBackground(new java.awt.Color(255, 255, 255));
+        setResizable(false);
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -60,11 +61,9 @@ public class GruposPrioritarios extends javax.swing.JFrame {
         jSeparator6.setToolTipText("");
 
         jLabel1.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("<html><u>Grupos Prioritários</u>");
 
         jLabel2.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("<html><h3>Efeitos colaterais comuns das vacinas COVID-19 </h3> "
             + "<p>As vacinas COVID-19 são seguras, e se vacinar ajudará "
             + "a protegê-lo contra o desenvolvimento de doença severa COVID-19 "
@@ -100,6 +99,11 @@ public class GruposPrioritarios extends javax.swing.JFrame {
         jButton8.setBorder(null);
         jButton8.setBorderPainted(false);
         jButton8.setContentAreaFilled(false);
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
 
         jButton9.setForeground(new java.awt.Color(102, 102, 102));
         jButton9.setText("Instruções");
@@ -212,9 +216,13 @@ public class GruposPrioritarios extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton9ActionPerformed
 
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+        System.out.println("FOi");
+    }//GEN-LAST:event_jButton8ActionPerformed
+
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
-
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
