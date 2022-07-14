@@ -23,7 +23,7 @@ public class Conexao {
     private static final String user = "root";
     // cria uma constante com a senha de acesso ao BD
     private static final String pass = "";
-    
+
     public static Connection getConnection() throws SQLException {
         // Iniciar conexão nula, ainda não estabelecida 
         Connection c = null;
@@ -34,7 +34,6 @@ public class Conexao {
         } catch (SQLException e) {
             throw new SQLException("Erro ao conectar! \n" + e.getMessage());
         }
-        
         return c;
     }
     
@@ -44,10 +43,10 @@ public class Conexao {
                 con.close();
             }
         } catch (SQLException e) {
-            throw new SQLException("Erro ao conectar ao BD");
+            throw new SQLException("Erro ao fechar a conexão com o Banco de Dados");
         }
     }
-    
+
     public static void closeConnection(Connection con, Statement stmt) throws SQLException {
         closeConnection(con);
         try {
@@ -55,10 +54,10 @@ public class Conexao {
                 stmt.close();
             }
         } catch (SQLException e) {
-            throw new SQLException("Erro ao conectar ao BD");
+            throw new SQLException("Erro ao fechar a conexão com o Banco de Dados");
         }
     }
-    
+
     public static void closeConnection(Connection con, Statement stmt, ResultSet rs) throws SQLException {
         closeConnection(con, stmt);
         try {
@@ -66,8 +65,7 @@ public class Conexao {
                 rs.close();
             }
         } catch (SQLException e) {
-            throw new SQLException("Erro ao conectar ao BD");
+            throw new SQLException("Erro ao fechar a conexão com o Banco de Dados");
         }
     }
-    
 }
