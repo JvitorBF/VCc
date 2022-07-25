@@ -5,6 +5,8 @@
  */
 package br.com.senactech.ProjetoIntegradorVCc.view;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author João Vitor
@@ -16,6 +18,7 @@ public class login extends javax.swing.JFrame {
      */
     public login() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -174,12 +177,18 @@ public class login extends javax.swing.JFrame {
     private void jbEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEntrarActionPerformed
         String email;
         String senha;
-        
+
         email = jtfEmail.getText();
-        senha = String.valueOf(jpfSenha.getPassword()); 
-        
+        senha = String.valueOf(jpfSenha.getPassword());
+
         System.out.println(email);
         System.out.println(senha);
+
+        Instrucoes i = new Instrucoes();
+        i.setVisible(true);
+        i.setLocationRelativeTo(null);
+        i.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
     }//GEN-LAST:event_jbEntrarActionPerformed
 
     /**
