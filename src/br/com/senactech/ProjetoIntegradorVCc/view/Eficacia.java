@@ -215,7 +215,10 @@ public class Eficacia extends javax.swing.JFrame {
     }//GEN-LAST:event_botaoAjudaActionPerformed
 
     private void BotaoVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoVoltarActionPerformed
-        // TODO add your handling code here;
+        Instrucoes i = new Instrucoes();
+        i.setVisible(true);
+        i.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_BotaoVoltarActionPerformed
 
     /**

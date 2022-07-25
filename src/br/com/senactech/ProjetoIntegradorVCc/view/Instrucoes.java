@@ -31,7 +31,7 @@ public class Instrucoes extends javax.swing.JFrame {
         jbtLevarLocal = new javax.swing.JButton();
         jlbSaibaTudo = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        BotaoVoltar = new javax.swing.JButton();
+        BotaoSair = new javax.swing.JButton();
         botaoAjuda = new javax.swing.JButton();
         botaoInstrucoes = new javax.swing.JButton();
         botaoLocaisVacinacao = new javax.swing.JButton();
@@ -65,9 +65,19 @@ public class Instrucoes extends javax.swing.JFrame {
 
         jbtEfei.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/senactech/ProjetoIntegradorVCc/view/3efeitos.png"))); // NOI18N
         jbtEfei.setBorder(null);
+        jbtEfei.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtEfeiActionPerformed(evt);
+            }
+        });
 
         jbtGrup.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/senactech/ProjetoIntegradorVCc/view/4grupos.png"))); // NOI18N
         jbtGrup.setBorder(null);
+        jbtGrup.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtGrupActionPerformed(evt);
+            }
+        });
 
         jbtCalen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/senactech/ProjetoIntegradorVCc/view/5calendario.png"))); // NOI18N
         jbtCalen.setBorder(null);
@@ -86,13 +96,13 @@ public class Instrucoes extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         jLabel4.setText("© 2021 WHO");
 
-        BotaoVoltar.setBackground(new java.awt.Color(38, 135, 68));
-        BotaoVoltar.setForeground(new java.awt.Color(255, 255, 255));
-        BotaoVoltar.setText("Voltar");
-        BotaoVoltar.setFocusable(false);
-        BotaoVoltar.addActionListener(new java.awt.event.ActionListener() {
+        BotaoSair.setBackground(new java.awt.Color(38, 135, 68));
+        BotaoSair.setForeground(new java.awt.Color(255, 255, 255));
+        BotaoSair.setText("Sair");
+        BotaoSair.setFocusable(false);
+        BotaoSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotaoVoltarActionPerformed(evt);
+                BotaoSairActionPerformed(evt);
             }
         });
 
@@ -130,7 +140,7 @@ public class Instrucoes extends javax.swing.JFrame {
         jdpFundo.setLayer(jbtLevarLocal, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jdpFundo.setLayer(jlbSaibaTudo, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jdpFundo.setLayer(jLabel4, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jdpFundo.setLayer(BotaoVoltar, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpFundo.setLayer(BotaoSair, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jdpFundo.setLayer(botaoAjuda, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jdpFundo.setLayer(botaoInstrucoes, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jdpFundo.setLayer(botaoLocaisVacinacao, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -171,7 +181,7 @@ public class Instrucoes extends javax.swing.JFrame {
                         .addGap(21, 21, 21)
                         .addComponent(botaoAjuda)
                         .addGap(295, 295, 295)
-                        .addComponent(BotaoVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(BotaoSair, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(26, 26, 26))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jdpFundoLayout.createSequentialGroup()
                         .addComponent(jLabel4)
@@ -182,7 +192,7 @@ public class Instrucoes extends javax.swing.JFrame {
             .addGroup(jdpFundoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jdpFundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(BotaoVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BotaoSair, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jdpFundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(botaoAjuda)
                         .addComponent(botaoInstrucoes)
@@ -223,21 +233,41 @@ public class Instrucoes extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BotaoVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoVoltarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotaoVoltarActionPerformed
+    private void BotaoSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoSairActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_BotaoSairActionPerformed
 
     private void jbtLevarLocalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtLevarLocalActionPerformed
-        // TODO add your handling code here:
+        OqLevarLocalDeVacinacao lv = new OqLevarLocalDeVacinacao();
+        this.setVisible(false);
+        lv.setVisible(true);
+        lv.setLocationRelativeTo(null);
     }//GEN-LAST:event_jbtLevarLocalActionPerformed
 
     private void jbtEficActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtEficActionPerformed
-        // TODO add your handling code here:
+        Eficacia e = new Eficacia();
+        this.setVisible(false);
+        e.setVisible(true);
+        e.setLocationRelativeTo(null);
     }//GEN-LAST:event_jbtEficActionPerformed
 
     private void jbtOndeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtOndeActionPerformed
-        // TODO add your handling code here:
+        // mapa
     }//GEN-LAST:event_jbtOndeActionPerformed
+
+    private void jbtGrupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtGrupActionPerformed
+        GruposPrioritarios gp = new GruposPrioritarios();
+        this.setVisible(false);
+        gp.setVisible(true);
+        gp.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jbtGrupActionPerformed
+
+    private void jbtEfeiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtEfeiActionPerformed
+        EfeitosColaterais ef = new EfeitosColaterais();
+        this.setVisible(false);
+        ef.setVisible(true);
+        ef.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jbtEfeiActionPerformed
 
     /**
      * @param args the command line arguments
@@ -276,7 +306,7 @@ public class Instrucoes extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BotaoVoltar;
+    private javax.swing.JButton BotaoSair;
     private javax.swing.JButton botaoAjuda;
     private javax.swing.JButton botaoCalendario;
     private javax.swing.JButton botaoInstrucoes;

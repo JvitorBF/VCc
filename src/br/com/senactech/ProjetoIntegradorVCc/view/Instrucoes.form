@@ -88,7 +88,7 @@
                           <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                           <Component id="botaoAjuda" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="295" max="-2" attributes="0"/>
-                          <Component id="BotaoVoltar" min="-2" pref="88" max="-2" attributes="0"/>
+                          <Component id="BotaoSair" min="-2" pref="88" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
@@ -104,7 +104,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="BotaoVoltar" min="-2" pref="36" max="-2" attributes="0"/>
+                      <Component id="BotaoSair" min="-2" pref="36" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="botaoAjuda" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="botaoInstrucoes" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -185,6 +185,9 @@
               <Border info="null"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtEfeiActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jbtGrup">
           <Properties>
@@ -195,6 +198,9 @@
               <Border info="null"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtGrupActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jbtCalen">
           <Properties>
@@ -235,7 +241,7 @@
             <Property name="text" type="java.lang.String" value="&#xa9; 2021 WHO"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="BotaoVoltar">
+        <Component class="javax.swing.JButton" name="BotaoSair">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="44" green="87" red="26" type="rgb"/>
@@ -243,11 +249,11 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Voltar"/>
+            <Property name="text" type="java.lang.String" value="Sair"/>
             <Property name="focusable" type="boolean" value="false"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotaoVoltarActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotaoSairActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="botaoAjuda">

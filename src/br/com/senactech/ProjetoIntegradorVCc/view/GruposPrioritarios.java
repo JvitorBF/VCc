@@ -226,7 +226,10 @@ public class GruposPrioritarios extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
+        Instrucoes i = new Instrucoes();
+        i.setVisible(true);
+        i.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
