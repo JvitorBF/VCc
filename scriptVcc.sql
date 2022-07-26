@@ -35,26 +35,11 @@ use devm211vcc;
 create table usuario (
 	id int primary key auto_increment,
     nome varchar(60),
-    telefone varchar(12) not null,
+    telefone varchar(14) not null,
     email varchar(60) not null, 
-    cpf varchar(11) not null unique,
+    cpf varchar(14) not null unique,
     cep varchar(9) not null,
     endereco varchar(120) not null,    
-    senha varchar(120) not null,
-    status boolean      
+    senha varchar(120) not null        
 );
-
-INSERT INTO usuario (id, nome, telefone, email, cpf, cep, endereco, senha, status) VALUES (
-	null,
-    'João Vitor',
-    '51999919750',
-    'jvitorbf35@gmail.com',
-    '05380419003',
-    '92990000',
-    'conzatti 459',
-    'abc123',
-	true
-);	
-
-/* ADICIONEM O LOGIN DE VOCÊS */
 
