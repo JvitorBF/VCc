@@ -46,7 +46,7 @@ public class Instrucoes extends javax.swing.JFrame {
 
         jbtOnde.setBackground(new java.awt.Color(205, 205, 205));
         jbtOnde.setForeground(new java.awt.Color(205, 205, 205));
-        jbtOnde.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/senactech/ProjetoIntegradorVCc/view/1onde.png"))); // NOI18N
+        jbtOnde.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/senactech/ProjetoIntegradorVCc/imagens/1onde.png"))); // NOI18N
         jbtOnde.setBorder(null);
         jbtOnde.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -55,7 +55,7 @@ public class Instrucoes extends javax.swing.JFrame {
         });
 
         jbtEfic.setBackground(new java.awt.Color(205, 205, 205));
-        jbtEfic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/senactech/ProjetoIntegradorVCc/view/2eficacia.png"))); // NOI18N
+        jbtEfic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/senactech/ProjetoIntegradorVCc/imagens/2eficacia.png"))); // NOI18N
         jbtEfic.setBorder(null);
         jbtEfic.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -63,7 +63,7 @@ public class Instrucoes extends javax.swing.JFrame {
             }
         });
 
-        jbtEfei.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/senactech/ProjetoIntegradorVCc/view/3efeitos.png"))); // NOI18N
+        jbtEfei.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/senactech/ProjetoIntegradorVCc/imagens/3efeitos.png"))); // NOI18N
         jbtEfei.setBorder(null);
         jbtEfei.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,7 +71,7 @@ public class Instrucoes extends javax.swing.JFrame {
             }
         });
 
-        jbtGrup.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/senactech/ProjetoIntegradorVCc/view/4grupos.png"))); // NOI18N
+        jbtGrup.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/senactech/ProjetoIntegradorVCc/imagens/4grupos.png"))); // NOI18N
         jbtGrup.setBorder(null);
         jbtGrup.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,10 +79,10 @@ public class Instrucoes extends javax.swing.JFrame {
             }
         });
 
-        jbtCalen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/senactech/ProjetoIntegradorVCc/view/5calendario.png"))); // NOI18N
+        jbtCalen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/senactech/ProjetoIntegradorVCc/imagens/5calendario.png"))); // NOI18N
         jbtCalen.setBorder(null);
 
-        jbtLevarLocal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/senactech/ProjetoIntegradorVCc/view/6oqLevar.png"))); // NOI18N
+        jbtLevarLocal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/senactech/ProjetoIntegradorVCc/imagens/6oqLevar.png"))); // NOI18N
         jbtLevarLocal.setBorder(null);
         jbtLevarLocal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
