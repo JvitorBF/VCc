@@ -6,7 +6,7 @@
 package br.com.senactech.projetoIntegradorVCc.controller;
 
 import java.util.ArrayList;
-import br.com.senactech.projetoIntegradorVCc.model.Usuario;
+import br.com.senactech.ProjetoIntegradorVCc.model.Usuario;
 
 /**
  *

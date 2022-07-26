@@ -5,6 +5,17 @@
  */
 package br.com.senactech.ProjetoIntegradorVCc.view;
 
+import br.com.senactech.ProjetoIntegradorVCc.services.ServicosFactory;
+import br.com.senactech.ProjetoIntegradorVCc.services.UsuarioServicos;
+import br.com.senactech.ProjetoIntegradorVCc.model.Usuario;
+import java.io.UnsupportedEncodingException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /**
@@ -12,6 +23,8 @@ import javax.swing.JOptionPane;
  * @author João Vitor
  */
 public class Registro extends javax.swing.JFrame {
+
+    JButton btnClick = null;
 
     /**
      * Creates new form vccApp
@@ -29,84 +42,27 @@ public class Registro extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jtfEmail1 = new javax.swing.JTextField();
-        jtfEmail2 = new javax.swing.JTextField();
-        jlEmail1 = new javax.swing.JLabel();
-        jtfNome1 = new javax.swing.JTextField();
-        jtfNome2 = new javax.swing.JTextField();
-        jtfNome4 = new javax.swing.JTextField();
-        buttonGroup2 = new javax.swing.ButtonGroup();
+        bgStatus = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jtfEmail = new javax.swing.JTextField();
-        jbEntrar = new javax.swing.JButton();
-        jpfSenha = new javax.swing.JPasswordField();
+        jbRegistrar = new javax.swing.JButton();
+        jtfSenha = new javax.swing.JPasswordField();
         jlEmail = new javax.swing.JLabel();
         jlSenha = new javax.swing.JLabel();
-        jtfNome = new javax.swing.JTextField();
+        jtfCep = new javax.swing.JTextField();
         jlEmail2 = new javax.swing.JLabel();
-        jFormattedTextField1 = new javax.swing.JFormattedTextField();
-        jFormattedTextField2 = new javax.swing.JFormattedTextField();
+        jtfEndereco = new javax.swing.JFormattedTextField();
+        jtfTelefone = new javax.swing.JFormattedTextField();
         jlEmail3 = new javax.swing.JLabel();
-        jtfNome3 = new javax.swing.JTextField();
+        jtfNome = new javax.swing.JTextField();
         jlEmail4 = new javax.swing.JLabel();
-        jFormattedTextField3 = new javax.swing.JFormattedTextField();
+        jtfCpf = new javax.swing.JFormattedTextField();
         jlEmail5 = new javax.swing.JLabel();
         jlSenha1 = new javax.swing.JLabel();
-        jRBAtivo = new javax.swing.JRadioButton();
-        jRBInativo = new javax.swing.JRadioButton();
         jButton1 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-
-        jtfEmail1.setBackground(new java.awt.Color(255, 255, 255));
-        jtfEmail1.setForeground(new java.awt.Color(120, 116, 109));
-        jtfEmail1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        jtfEmail1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        jtfEmail1.setMargin(new java.awt.Insets(0, 5, 0, 0));
-
-        jtfEmail2.setBackground(new java.awt.Color(255, 255, 255));
-        jtfEmail2.setForeground(new java.awt.Color(120, 116, 109));
-        jtfEmail2.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        jtfEmail2.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        jtfEmail2.setMargin(new java.awt.Insets(0, 5, 0, 0));
-
-        jlEmail1.setForeground(new java.awt.Color(120, 116, 109));
-        jlEmail1.setText("Email");
-
-        jtfNome1.setBackground(new java.awt.Color(255, 255, 255));
-        jtfNome1.setForeground(new java.awt.Color(120, 116, 109));
-        jtfNome1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        jtfNome1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        jtfNome1.setMargin(new java.awt.Insets(0, 5, 0, 0));
-        jtfNome1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jtfNome1KeyTyped(evt);
-            }
-        });
-
-        jtfNome2.setBackground(new java.awt.Color(255, 255, 255));
-        jtfNome2.setForeground(new java.awt.Color(120, 116, 109));
-        jtfNome2.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        jtfNome2.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        jtfNome2.setMargin(new java.awt.Insets(0, 5, 0, 0));
-        jtfNome2.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jtfNome2KeyTyped(evt);
-            }
-        });
-
-        jtfNome4.setBackground(new java.awt.Color(255, 255, 255));
-        jtfNome4.setForeground(new java.awt.Color(120, 116, 109));
-        jtfNome4.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        jtfNome4.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        jtfNome4.setMargin(new java.awt.Insets(0, 5, 0, 0));
-        jtfNome4.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jtfNome4KeyTyped(evt);
-            }
-        });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela de LogIn");
@@ -154,24 +110,24 @@ public class Registro extends javax.swing.JFrame {
             }
         });
 
-        jbEntrar.setBackground(new java.awt.Color(28, 135, 68));
-        jbEntrar.setFont(new java.awt.Font("Cambria", 1, 12)); // NOI18N
-        jbEntrar.setForeground(new java.awt.Color(255, 255, 255));
-        jbEntrar.setText("Registrar");
-        jbEntrar.setBorderPainted(false);
-        jbEntrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jbEntrar.setFocusPainted(false);
-        jbEntrar.addActionListener(new java.awt.event.ActionListener() {
+        jbRegistrar.setBackground(new java.awt.Color(28, 135, 68));
+        jbRegistrar.setFont(new java.awt.Font("Cambria", 1, 12)); // NOI18N
+        jbRegistrar.setForeground(new java.awt.Color(255, 255, 255));
+        jbRegistrar.setText("Registrar");
+        jbRegistrar.setBorderPainted(false);
+        jbRegistrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jbRegistrar.setFocusPainted(false);
+        jbRegistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbEntrarActionPerformed(evt);
+                jbRegistrarActionPerformed(evt);
             }
         });
 
-        jpfSenha.setBackground(new java.awt.Color(255, 255, 255));
-        jpfSenha.setForeground(new java.awt.Color(120, 116, 109));
-        jpfSenha.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        jpfSenha.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        jpfSenha.setMargin(new java.awt.Insets(0, 5, 0, 0));
+        jtfSenha.setBackground(new java.awt.Color(255, 255, 255));
+        jtfSenha.setForeground(new java.awt.Color(120, 116, 109));
+        jtfSenha.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        jtfSenha.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jtfSenha.setMargin(new java.awt.Insets(0, 5, 0, 0));
 
         jlEmail.setForeground(new java.awt.Color(120, 116, 109));
         jlEmail.setText("Email");
@@ -179,25 +135,25 @@ public class Registro extends javax.swing.JFrame {
         jlSenha.setForeground(new java.awt.Color(120, 116, 109));
         jlSenha.setText("Endereço");
 
-        jtfNome.setBackground(new java.awt.Color(255, 255, 255));
-        jtfNome.setForeground(new java.awt.Color(120, 116, 109));
-        jtfNome.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        jtfNome.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        jtfNome.setMargin(new java.awt.Insets(0, 5, 0, 0));
-        jtfNome.addKeyListener(new java.awt.event.KeyAdapter() {
+        jtfCep.setBackground(new java.awt.Color(255, 255, 255));
+        jtfCep.setForeground(new java.awt.Color(120, 116, 109));
+        jtfCep.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        jtfCep.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jtfCep.setMargin(new java.awt.Insets(0, 5, 0, 0));
+        jtfCep.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                jtfNomeKeyTyped(evt);
+                jtfCepKeyTyped(evt);
             }
         });
 
         jlEmail2.setForeground(new java.awt.Color(120, 116, 109));
         jlEmail2.setText("Nome");
 
-        jFormattedTextField1.setBackground(new java.awt.Color(255, 255, 255));
+        jtfEndereco.setBackground(new java.awt.Color(255, 255, 255));
 
-        jFormattedTextField2.setBackground(new java.awt.Color(255, 255, 255));
+        jtfTelefone.setBackground(new java.awt.Color(255, 255, 255));
         try {
-            jFormattedTextField2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##) ####-####")));
+            jtfTelefone.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##)####-####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
@@ -205,28 +161,28 @@ public class Registro extends javax.swing.JFrame {
         jlEmail3.setForeground(new java.awt.Color(120, 116, 109));
         jlEmail3.setText("Cpf");
 
-        jtfNome3.setBackground(new java.awt.Color(255, 255, 255));
-        jtfNome3.setForeground(new java.awt.Color(120, 116, 109));
-        jtfNome3.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        jtfNome3.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        jtfNome3.setMargin(new java.awt.Insets(0, 5, 0, 0));
-        jtfNome3.addActionListener(new java.awt.event.ActionListener() {
+        jtfNome.setBackground(new java.awt.Color(255, 255, 255));
+        jtfNome.setForeground(new java.awt.Color(120, 116, 109));
+        jtfNome.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        jtfNome.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jtfNome.setMargin(new java.awt.Insets(0, 5, 0, 0));
+        jtfNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtfNome3ActionPerformed(evt);
+                jtfNomeActionPerformed(evt);
             }
         });
-        jtfNome3.addKeyListener(new java.awt.event.KeyAdapter() {
+        jtfNome.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                jtfNome3KeyTyped(evt);
+                jtfNomeKeyTyped(evt);
             }
         });
 
         jlEmail4.setForeground(new java.awt.Color(120, 116, 109));
         jlEmail4.setText("Telefone");
 
-        jFormattedTextField3.setBackground(new java.awt.Color(255, 255, 255));
+        jtfCpf.setBackground(new java.awt.Color(255, 255, 255));
         try {
-            jFormattedTextField3.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
+            jtfCpf.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
@@ -237,24 +193,16 @@ public class Registro extends javax.swing.JFrame {
         jlSenha1.setForeground(new java.awt.Color(120, 116, 109));
         jlSenha1.setText("Senha");
 
-        jRBAtivo.setBackground(new java.awt.Color(204, 204, 204));
-        buttonGroup2.add(jRBAtivo);
-        jRBAtivo.setForeground(new java.awt.Color(120, 116, 109));
-        jRBAtivo.setText("Ativo");
-
-        jRBInativo.setBackground(new java.awt.Color(204, 204, 204));
-        buttonGroup2.add(jRBInativo);
-        jRBInativo.setForeground(new java.awt.Color(120, 116, 109));
-        jRBInativo.setText("Inativo");
-
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setForeground(new java.awt.Color(120, 116, 109));
         jButton1.setText("Login");
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
-
-        jLabel3.setForeground(new java.awt.Color(120, 116, 109));
-        jLabel3.setText("Status");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -268,15 +216,15 @@ public class Registro extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(42, 42, 42)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jbEntrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jbRegistrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(jlSenha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jlEmail2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jFormattedTextField1, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jtfEndereco, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jtfEmail, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jpfSenha, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jtfNome3, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jtfSenha, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jtfNome, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jlEmail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jlSenha1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 305, Short.MAX_VALUE))
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -288,15 +236,9 @@ public class Registro extends javax.swing.JFrame {
                                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(jlEmail5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 305, Short.MAX_VALUE)
                                             .addComponent(jlEmail4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                                .addGap(9, 9, 9)
-                                                .addComponent(jRBAtivo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jRBInativo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addComponent(jFormattedTextField3, javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(jtfNome, javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(jFormattedTextField2, javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                            .addComponent(jtfCpf, javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jtfCep, javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jtfTelefone, javax.swing.GroupLayout.Alignment.TRAILING))))
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(38, 38, 38)))
@@ -313,8 +255,8 @@ public class Registro extends javax.swing.JFrame {
                     .addComponent(jlEmail4, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jtfNome3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jFormattedTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfNome, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -322,29 +264,21 @@ public class Registro extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jtfEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jtfNome, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfCep, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jlEmail3, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jlSenha1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jpfSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jFormattedTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(2, 2, 2)
-                        .addComponent(jlSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel3)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jRBAtivo)
-                    .addComponent(jRBInativo))
+                    .addComponent(jtfSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(2, 2, 2)
+                .addComponent(jlSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
+                .addComponent(jtfEndereco, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
-                .addComponent(jbEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jbRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
                 .addGap(32, 32, 32))
@@ -369,75 +303,171 @@ public class Registro extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jbEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEntrarActionPerformed
-        String email;
-        String senha;
-        String nome;
-        
-        nome = jtfNome.getText();
-        email = jtfEmail.getText();
-        senha = String.valueOf(jpfSenha.getPassword());
-        
-        System.out.println(nome);
-        System.out.println(email);
-        System.out.println(senha);
-        
-        
-        
-    }//GEN-LAST:event_jbEntrarActionPerformed
+    private void jbRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbRegistrarActionPerformed
+        if (validaInputs()) {
+            try {
 
-    private void jtfNomeKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNomeKeyTyped
-        // TODO add your handling code here:
-        String caracteres = "0987654321/[]{}=+-_)(*&¨%$#@!<>;:?";
-        
+                String email;
+                String senha;
+                String nome;
+                String endereco;
+                String telefone;
+                String cpf;
+                String cep;
+
+                nome = jtfNome.getText();
+                email = jtfEmail.getText();
+                senha = String.valueOf(jtfSenha.getPassword());
+                endereco = jtfEndereco.getText();
+                telefone = jtfTelefone.getText();
+                cpf = jtfCpf.getText();
+                cep = jtfCep.getText();
+
+                UsuarioServicos uServicos = ServicosFactory.getUsuarioServicos();
+                Usuario u = new Usuario();
+                u.setNome(jtfNome.getText().toUpperCase());
+                u.setEmail(jtfEmail.getText());
+                u.setSenha(geraSenha(String.valueOf(jtfSenha.getPassword())));
+                u.setEndereco(jtfEndereco.getText());
+                u.setTelefone(jtfTelefone.getText());
+                u.setCep(jtfCep.getText());
+                u.setCpf(jtfCpf.getText());
+                try {
+                    uServicos.cadUsuario(u);
+                } catch (SQLException ex) {
+                    Logger.getLogger(Registro.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                JOptionPane.showMessageDialog(rootPane, "Usuário cadastro com sucesso.",
+                        "Cadastro", JOptionPane.INFORMATION_MESSAGE);
+
+//        System.out.println(nome);
+//        System.out.println(email);
+//        System.out.println(senha);
+//        System.out.println(endereco);
+//        System.out.println(telefone);
+//        System.out.println(cpf);
+//        System.out.println(cep);
+            } catch (NoSuchAlgorithmException ex) {
+                Logger.getLogger(Registro.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (UnsupportedEncodingException ex) {
+                Logger.getLogger(Registro.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+        }
+    }//GEN-LAST:event_jbRegistrarActionPerformed
+
+//    ESTE METODO SERVE PARA GERAR UMA SENHA CRIPTADA
+    public static String geraSenha(String senha) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+        {
+            MessageDigest mdMD5 = MessageDigest.getInstance("MD5");
+            byte mdByteMD5[] = mdMD5.digest(senha.getBytes("UTF-8"));
+            StringBuilder hexMDMD5 = new StringBuilder();
+            for (byte b : mdByteMD5) {
+                hexMDMD5.append(String.format("%02X", 0xFF & b));
+            }
+            String senhaMD5HashHex = hexMDMD5.toString();
+            return senhaMD5HashHex;
+        }
+
+    } // FIM METODO INCRIPITAR SENHA
+
+    public Boolean validaInputs() {
+        //String email = jtfEmail.getText();
+        String telefone = jtfTelefone.getText();
+        UsuarioServicos usuarioS = ServicosFactory.getUsuarioServicos();
+        //VALIDA PARA QUE OS INPUTS NAO FIQUEM EM BRANCO
+        if (jtfNome.getText().isBlank()
+                || jtfEmail.getText().isBlank()
+                // || String.valueOf(jtfSenha.getPassword().
+                || jtfEndereco.getText().isBlank()
+                || jtfTelefone.getText().isBlank()
+                || jtfCep.getText().isBlank()
+                || jtfCpf.getText().isBlank()) {
+            JOptionPane.showMessageDialog(this,
+                    "Todos os campos devem ser preenchidos!",
+                    ".: Erro :.", JOptionPane.ERROR_MESSAGE);
+            jtfNome.requestFocus();
+            return false;
+        }
+
+        //valida tamanho do numero de telefone
+        if (telefone.length() < 13) { //&& telefone.length() != 11) {
+            JOptionPane.showMessageDialog(this,
+                    "Telefone informado esta incorreto",
+                    ".: Erro :.", JOptionPane.ERROR_MESSAGE);
+            jtfTelefone.requestFocus();
+            return false;
+        }
+
+//        if (btnClick.getText() == "Registrar") {
+//
+//            try {
+//                if (usuarioS.verEmail(jtfEmail.getText())) {
+//                    JOptionPane.showMessageDialog(this,
+//                            "Email já cadastrado, registre-se com outro email Por Favor!!!",
+//                            ".: Erro :.", JOptionPane.ERROR_MESSAGE);
+//                    jtfEmail.requestFocus();
+//                    return false;
+//                } else try {
+//
+//                    //validação para nao ter 2 emails iguais cadastrados
+//                    if (usuarioS.verCPF(jtfCpf.getText())) {
+//                        JOptionPane.showMessageDialog(this,
+//                                "CPF já cadastrado!!!",
+//                                ".: Erro :.", JOptionPane.ERROR_MESSAGE);
+//                        jtfCpf.requestFocus();
+//                        return false;
+//                    }
+//                } catch (SQLException ex) {
+//                    Logger.getLogger(Registro.class.getName()).log(Level.SEVERE, null, ex);
+//                }
+//            } catch (SQLException ex) {
+//                Logger.getLogger(Registro.class.getName()).log(Level.SEVERE, null, ex);
+//            }
+//
+//        }
+
+        return true;
+    }
+
+    private void jtfCepKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCepKeyTyped
+        // VALIDA PARA O USUARIO NAO COLOCAR CARACTERES ESPECIAIS NEM NUMEROS
+        String caracteres = "-0987654321";
+
         if (evt.getKeyChar() == java.awt.event.KeyEvent.VK_ENTER) {
             evt.consume();
-        } else if (caracteres.contains(evt.getKeyChar()+ "" )) {
-            JOptionPane.showMessageDialog(rootPane, "Utilize apenas letras");
+        } else if (!caracteres.contains(evt.getKeyChar() + "")) {
+            JOptionPane.showMessageDialog(rootPane, "Utilize apenas numeros");
             evt.consume();
         }
-        
-        
-        
-//        if (caracteres.contains(evt.getKeyChar() + "")) {
-//            evt.consume();
-//        }
-        
-   
-//      String nome = jtfNome.getText().toUpperCase();
-//       if (nome.contains(evt.getKeyChar() + "")) {
-//        evt.consume();
-//           //nome =  jtfNome.getText().toUpperCase();             
-//         //  nome = jtfSNome.getText().toUpperCase();
-//       }
-
-    }//GEN-LAST:event_jtfNomeKeyTyped
+    }//GEN-LAST:event_jtfCepKeyTyped
 
     private void jtfEmailKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfEmailKeyTyped
         // TODO add your handling code here:
-          
-   
     }//GEN-LAST:event_jtfEmailKeyTyped
 
-    private void jtfNome1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNome1KeyTyped
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jtfNome1KeyTyped
+    private void jtfNomeKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNomeKeyTyped
+        // VALIDA PARA O USUARIO NAO COLOCAR CARACTERES EPESCIAIS OU NUMEROS 
+        String caracteres = "0987654321/[]{}=+-_)(*&¨%$#@!<>;:?";
+        if (caracteres.contains(evt.getKeyChar() + "")) {
+            JOptionPane.showMessageDialog(rootPane, "Utilize apenas letras");
+            evt.consume();
+        }
 
-    private void jtfNome2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNome2KeyTyped
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jtfNome2KeyTyped
+    }//GEN-LAST:event_jtfNomeKeyTyped
 
-    private void jtfNome3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNome3KeyTyped
+    private void jtfNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfNomeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jtfNome3KeyTyped
+    }//GEN-LAST:event_jtfNomeActionPerformed
 
-    private void jtfNome3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfNome3ActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jtfNome3ActionPerformed
-
-    private void jtfNome4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNome4KeyTyped
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jtfNome4KeyTyped
+        login l = new login();
+        l.setVisible(true);
+        l.setLocationRelativeTo(null);
+        l.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -482,35 +512,26 @@ public class Registro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.ButtonGroup bgStatus;
     private javax.swing.JButton jButton1;
-    private javax.swing.JFormattedTextField jFormattedTextField1;
-    private javax.swing.JFormattedTextField jFormattedTextField2;
-    private javax.swing.JFormattedTextField jFormattedTextField3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JRadioButton jRBAtivo;
-    private javax.swing.JRadioButton jRBInativo;
-    private javax.swing.JButton jbEntrar;
+    private javax.swing.JButton jbRegistrar;
     private javax.swing.JLabel jlEmail;
-    private javax.swing.JLabel jlEmail1;
     private javax.swing.JLabel jlEmail2;
     private javax.swing.JLabel jlEmail3;
     private javax.swing.JLabel jlEmail4;
     private javax.swing.JLabel jlEmail5;
     private javax.swing.JLabel jlSenha;
     private javax.swing.JLabel jlSenha1;
-    private javax.swing.JPasswordField jpfSenha;
+    private javax.swing.JTextField jtfCep;
+    private javax.swing.JFormattedTextField jtfCpf;
     private javax.swing.JTextField jtfEmail;
-    private javax.swing.JTextField jtfEmail1;
-    private javax.swing.JTextField jtfEmail2;
+    private javax.swing.JFormattedTextField jtfEndereco;
     private javax.swing.JTextField jtfNome;
-    private javax.swing.JTextField jtfNome1;
-    private javax.swing.JTextField jtfNome2;
-    private javax.swing.JTextField jtfNome3;
-    private javax.swing.JTextField jtfNome4;
+    private javax.swing.JPasswordField jtfSenha;
+    private javax.swing.JFormattedTextField jtfTelefone;
     // End of variables declaration//GEN-END:variables
 }
