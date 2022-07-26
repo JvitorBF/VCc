@@ -5,7 +5,17 @@
  */
 package br.com.senactech.ProjetoIntegradorVCc.view;
 
+import br.com.senactech.ProjetoIntegradorVCc.services.ServicosFactory;
+import br.com.senactech.ProjetoIntegradorVCc.services.UsuarioServicos;
+import br.com.senactech.ProjetoIntegradorVCc.model.Usuario;
+import java.io.UnsupportedEncodingException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -39,7 +49,7 @@ public class login extends javax.swing.JFrame {
         jpfSenha = new javax.swing.JPasswordField();
         jlEmail = new javax.swing.JLabel();
         jlSenha = new javax.swing.JLabel();
-        jlRegistrar = new javax.swing.JLabel();
+        jbRegistro = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela de LogIn");
@@ -106,9 +116,15 @@ public class login extends javax.swing.JFrame {
         jlSenha.setForeground(new java.awt.Color(120, 116, 109));
         jlSenha.setText("Senha");
 
-        jlRegistrar.setForeground(new java.awt.Color(120, 116, 109));
-        jlRegistrar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jlRegistrar.setText("Registre-se");
+        jbRegistro.setForeground(new java.awt.Color(0, 0, 0));
+        jbRegistro.setText("Registre-se");
+        jbRegistro.setBorderPainted(false);
+        jbRegistro.setContentAreaFilled(false);
+        jbRegistro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbRegistroActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -122,7 +138,6 @@ public class login extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(42, 42, 42)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jlRegistrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jlEmail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGap(283, 283, 283))
@@ -131,7 +146,8 @@ public class login extends javax.swing.JFrame {
                             .addComponent(jpfSenha, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jlSenha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(278, 278, 278)))
+                                .addGap(278, 278, 278))
+                            .addComponent(jbRegistro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(38, 38, 38)))
                 .addContainerGap())
         );
@@ -151,8 +167,8 @@ public class login extends javax.swing.JFrame {
                 .addGap(25, 25, 25)
                 .addComponent(jbEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jlRegistrar)
-                .addGap(50, 50, 50))
+                .addComponent(jbRegistro)
+                .addGap(38, 38, 38))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -175,21 +191,68 @@ public class login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEntrarActionPerformed
-        String email;
-        String senha;
+//        String email;
+//        String senha;
+//
+//        email = jtfEmail.getText();
+//        senha = String.valueOf(jpfSenha.getPassword());
+//
+//        System.out.println(email);
+//        System.out.println(senha);
+        try {
+            UsuarioServicos uServicos = ServicosFactory.getUsuarioServicos();
+            Usuario u = uServicos.getByUsuario(jtfEmail.getText());
+            String senha = geraSenha(String.valueOf(jpfSenha.getPassword()));
+            if (senha.equals(u.getSenha())) {
+                Instrucoes i = new Instrucoes();
+                i.setVisible(true);
+                i.setLocationRelativeTo(null);
+                i.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                this.dispose();
+            } else {
+                JOptionPane.showMessageDialog(rootPane, "Usuário ou senha incorretos.", ".: Erro Login :.", JOptionPane.INFORMATION_MESSAGE);
 
-        email = jtfEmail.getText();
-        senha = String.valueOf(jpfSenha.getPassword());
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (NoSuchAlgorithmException ex) {
+            Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (UnsupportedEncodingException ex) {
+            Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
-        System.out.println(email);
-        System.out.println(senha);
+//        Instrucoes i = new Instrucoes();
+//        i.setVisible(true);
+//        i.setLocationRelativeTo(null);
+//        i.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        this.dispose();
 
-        Instrucoes i = new Instrucoes();
-        i.setVisible(true);
-        i.setLocationRelativeTo(null);
-        i.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.dispose();
     }//GEN-LAST:event_jbEntrarActionPerformed
+
+//    ESTE METODO SERVE PARA GERAR UMA SENHA CRIPTADA
+    public static String geraSenha(String senha) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+        {
+            MessageDigest mdMD5 = MessageDigest.getInstance("MD5");
+            byte mdByteMD5[] = mdMD5.digest(senha.getBytes("UTF-8"));
+            StringBuilder hexMDMD5 = new StringBuilder();
+            for (byte b : mdByteMD5) {
+                hexMDMD5.append(String.format("%02X", 0xFF & b));
+            }
+            String senhaMD5HashHex = hexMDMD5.toString();
+            return senhaMD5HashHex;
+        }
+
+    } // FIM METODO INCRIPITAR SENHA
+
+
+    private void jbRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbRegistroActionPerformed
+        // TODO add your handling code here:
+        Registro r = new Registro();
+        r.setVisible(true);
+        r.setLocationRelativeTo(null);
+        r.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
+    }//GEN-LAST:event_jbRegistroActionPerformed
 
     /**
      * @param args the command line arguments
@@ -205,16 +268,21 @@ public class login extends javax.swing.JFrame {
                 if ("".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
+
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(login.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(login.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(login.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(login.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -235,8 +303,8 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JButton jbEntrar;
+    private javax.swing.JButton jbRegistro;
     private javax.swing.JLabel jlEmail;
-    private javax.swing.JLabel jlRegistrar;
     private javax.swing.JLabel jlSenha;
     private javax.swing.JPasswordField jpfSenha;
     private javax.swing.JTextField jtfEmail;
