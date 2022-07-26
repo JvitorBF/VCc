@@ -198,6 +198,9 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbEntrarActionPerformed"/>
           </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="login_jbEntrar"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JPasswordField" name="jpfSenha">
           <Properties>

@@ -191,14 +191,6 @@ public class login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEntrarActionPerformed
-//        String email;
-//        String senha;
-//
-//        email = jtfEmail.getText();
-//        senha = String.valueOf(jpfSenha.getPassword());
-//
-//        System.out.println(email);
-//        System.out.println(senha);
         try {
             UsuarioServicos uServicos = ServicosFactory.getUsuarioServicos();
             Usuario u = uServicos.getByUsuario(jtfEmail.getText());
@@ -210,23 +202,12 @@ public class login extends javax.swing.JFrame {
                 i.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 this.dispose();
             } else {
-                JOptionPane.showMessageDialog(rootPane, "Usuário ou senha incorretos.", ".: Erro Login :.", JOptionPane.INFORMATION_MESSAGE);
-
+                JOptionPane.showMessageDialog(rootPane, "Email ou senha incorretos.",
+                        ".: Erro Login :.", JOptionPane.INFORMATION_MESSAGE);
             }
-        } catch (SQLException ex) {
-            Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (NoSuchAlgorithmException ex) {
-            Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (UnsupportedEncodingException ex) {
+        } catch (SQLException | NoSuchAlgorithmException | UnsupportedEncodingException ex) {
             Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
         }
-
-//        Instrucoes i = new Instrucoes();
-//        i.setVisible(true);
-//        i.setLocationRelativeTo(null);
-//        i.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//        this.dispose();
-
     }//GEN-LAST:event_jbEntrarActionPerformed
 
 //    ESTE METODO SERVE PARA GERAR UMA SENHA CRIPTADA
