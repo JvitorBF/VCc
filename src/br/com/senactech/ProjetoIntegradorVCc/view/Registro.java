@@ -153,7 +153,7 @@ public class Registro extends javax.swing.JFrame {
 
         jtfTelefone.setBackground(new java.awt.Color(255, 255, 255));
         try {
-            jtfTelefone.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##)####-####")));
+            jtfTelefone.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##)#####-####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
@@ -306,28 +306,13 @@ public class Registro extends javax.swing.JFrame {
     private void jbRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbRegistrarActionPerformed
         if (validaInputs()) {
             try {
-
-                String email;
-                String senha;
-                String nome;
-                String endereco;
-                String telefone;
-                String cpf;
-                String cep;
-
-                nome = jtfNome.getText();
-                email = jtfEmail.getText();
-                senha = String.valueOf(jtfSenha.getPassword());
-                endereco = jtfEndereco.getText();
-                telefone = jtfTelefone.getText();
-                cpf = jtfCpf.getText();
-                cep = jtfCep.getText();
+                String senha = geraSenha(String.valueOf(jtfSenha.getPassword()));
 
                 UsuarioServicos uServicos = ServicosFactory.getUsuarioServicos();
                 Usuario u = new Usuario();
                 u.setNome(jtfNome.getText().toUpperCase());
                 u.setEmail(jtfEmail.getText());
-                u.setSenha(geraSenha(String.valueOf(jtfSenha.getPassword())));
+                u.setSenha(senha);
                 u.setEndereco(jtfEndereco.getText());
                 u.setTelefone(jtfTelefone.getText());
                 u.setCep(jtfCep.getText());
@@ -339,17 +324,7 @@ public class Registro extends javax.swing.JFrame {
                 }
                 JOptionPane.showMessageDialog(rootPane, "Usuário cadastro com sucesso.",
                         "Cadastro", JOptionPane.INFORMATION_MESSAGE);
-
-//        System.out.println(nome);
-//        System.out.println(email);
-//        System.out.println(senha);
-//        System.out.println(endereco);
-//        System.out.println(telefone);
-//        System.out.println(cpf);
-//        System.out.println(cep);
-            } catch (NoSuchAlgorithmException ex) {
-                Logger.getLogger(Registro.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (UnsupportedEncodingException ex) {
+            } catch (NoSuchAlgorithmException | UnsupportedEncodingException ex) {
                 Logger.getLogger(Registro.class.getName()).log(Level.SEVERE, null, ex);
             }
 
@@ -391,7 +366,7 @@ public class Registro extends javax.swing.JFrame {
         }
 
         //valida tamanho do numero de telefone
-        if (telefone.length() < 13) { //&& telefone.length() != 11) {
+        if (telefone.length() < 14) { //&& telefone.length() != 11) {
             JOptionPane.showMessageDialog(this,
                     "Telefone informado esta incorreto",
                     ".: Erro :.", JOptionPane.ERROR_MESSAGE);
@@ -426,15 +401,13 @@ public class Registro extends javax.swing.JFrame {
 //            }
 //
 //        }
-
         return true;
     }
 
     private void jtfCepKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCepKeyTyped
         // VALIDA PARA O USUARIO NAO COLOCAR CARACTERES ESPECIAIS NEM NUMEROS
         String caracteres = "-0987654321";
-
-        if (evt.getKeyChar() == java.awt.event.KeyEvent.VK_ENTER) {
+        if (evt.getKeyChar() == java.awt.event.KeyEvent.VK_BACK_SPACE) {
             evt.consume();
         } else if (!caracteres.contains(evt.getKeyChar() + "")) {
             JOptionPane.showMessageDialog(rootPane, "Utilize apenas numeros");
