@@ -10,7 +10,6 @@ import br.com.senactech.ProjetoIntegradorVCc.model.Usuario;
 import java.sql.SQLException;
 import java.sql.Connection;
 import java.sql.Statement;
-import java.sql.Statement;
 import java.sql.ResultSet;
 
 /**
@@ -26,7 +25,7 @@ public class UsuarioDAO {
         try {
             String sql;
             sql = "insert into usuario (id,nome,telefone,email,cpf,cep,endereco,senha) values (null, '"
-                    + uVO.getNome() + "','" + uVO.getTelefone()+ "','"
+                    + uVO.getNome() + "','" + uVO.getTelefone() + "','"
                     + uVO.getEmail() + "','" + uVO.getCpf() + "','"
                     + uVO.getCep() + "','" + uVO.getEndereco() + "','"
                     + uVO.getSenha() + "')";
@@ -78,8 +77,7 @@ public class UsuarioDAO {
                     + "cpf = '" + uVO.getCpf() + "',"
                     + "cep = '" + uVO.getCep() + "',"
                     + "endereco = '" + uVO.getEndereco() + "',"
-                    + "senha = '" + uVO.getSenha() + "',"
-                    + "status = " + uVO.isStatus() + "";
+                    + "senha = '" + uVO.getSenha() + "'";
             stmt.execute(sql);
         } catch (SQLException e) {
             throw new SQLException("Erro ao atualizar usuário!" + e.getMessage());
@@ -112,10 +110,11 @@ public class UsuarioDAO {
 
         try {
             String sql;
-            sql = "select email from usuario where email = '" + email +"'";
+            sql = "select email from usuario where email = '" + email + "'";
+            System.out.println(sql);
             ResultSet rs = stmt.executeQuery(sql);
             while (rs.next()) {
-                verEmail = rs.wasNull();
+                verEmail = !rs.wasNull();
             }
         } catch (SQLException e) {
             throw new SQLException("Usuario com este Email não existe. \n"
@@ -139,7 +138,7 @@ public class UsuarioDAO {
             sql = "select cpf from usuario where cpf ' " + cpf + " ' ";
             ResultSet rs = stmt.executeQuery(sql);
             while (rs.next()) {
-                vercpf = rs.wasNull();
+                vercpf = !rs.wasNull();
             }
         } catch (SQLException e) {
             throw new SQLException("Usuario com este CPF não existe. \n"
