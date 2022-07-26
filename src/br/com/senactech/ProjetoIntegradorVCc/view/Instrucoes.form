@@ -150,7 +150,7 @@
               <Color blue="cd" green="cd" red="cd" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/br/com/senactech/ProjetoIntegradorVCc/view/1onde.png"/>
+              <Image iconType="3" name="/br/com/senactech/ProjetoIntegradorVCc/imagens/1onde.png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
@@ -166,7 +166,7 @@
               <Color blue="cd" green="cd" red="cd" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/br/com/senactech/ProjetoIntegradorVCc/view/2eficacia.png"/>
+              <Image iconType="3" name="/br/com/senactech/ProjetoIntegradorVCc/imagens/2eficacia.png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
@@ -179,7 +179,7 @@
         <Component class="javax.swing.JButton" name="jbtEfei">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/br/com/senactech/ProjetoIntegradorVCc/view/3efeitos.png"/>
+              <Image iconType="3" name="/br/com/senactech/ProjetoIntegradorVCc/imagens/3efeitos.png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
@@ -192,7 +192,7 @@
         <Component class="javax.swing.JButton" name="jbtGrup">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/br/com/senactech/ProjetoIntegradorVCc/view/4grupos.png"/>
+              <Image iconType="3" name="/br/com/senactech/ProjetoIntegradorVCc/imagens/4grupos.png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
@@ -205,7 +205,7 @@
         <Component class="javax.swing.JButton" name="jbtCalen">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/br/com/senactech/ProjetoIntegradorVCc/view/5calendario.png"/>
+              <Image iconType="3" name="/br/com/senactech/ProjetoIntegradorVCc/imagens/5calendario.png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
@@ -215,7 +215,7 @@
         <Component class="javax.swing.JButton" name="jbtLevarLocal">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/br/com/senactech/ProjetoIntegradorVCc/view/6oqLevar.png"/>
+              <Image iconType="3" name="/br/com/senactech/ProjetoIntegradorVCc/imagens/6oqLevar.png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
