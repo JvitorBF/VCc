@@ -81,6 +81,11 @@ public class Instrucoes extends javax.swing.JFrame {
 
         jbtCalen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/senactech/ProjetoIntegradorVCc/imagens/5calendario.png"))); // NOI18N
         jbtCalen.setBorder(null);
+        jbtCalen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtCalenActionPerformed(evt);
+            }
+        });
 
         jbtLevarLocal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/senactech/ProjetoIntegradorVCc/imagens/6oqLevar.png"))); // NOI18N
         jbtLevarLocal.setBorder(null);
@@ -268,6 +273,13 @@ public class Instrucoes extends javax.swing.JFrame {
         ef.setVisible(true);
         ef.setLocationRelativeTo(null);
     }//GEN-LAST:event_jbtEfeiActionPerformed
+
+    private void jbtCalenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtCalenActionPerformed
+        JCalendar cal = new JCalendar();
+        this.setVisible(false);
+        cal.setVisible(true);
+        cal.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jbtCalenActionPerformed
 
     /**
      * @param args the command line arguments
