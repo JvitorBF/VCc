@@ -1,5 +1,7 @@
 package br.com.senactech.ProjetoIntegradorVCc.view;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author aug
@@ -32,10 +34,6 @@ public class Instrucoes extends javax.swing.JFrame {
         jlbSaibaTudo = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         BotaoSair = new javax.swing.JButton();
-        botaoAjuda = new javax.swing.JButton();
-        botaoInstrucoes = new javax.swing.JButton();
-        botaoLocaisVacinacao = new javax.swing.JButton();
-        botaoCalendario = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -111,32 +109,6 @@ public class Instrucoes extends javax.swing.JFrame {
             }
         });
 
-        botaoAjuda.setBackground(new java.awt.Color(255, 255, 255));
-        botaoAjuda.setForeground(new java.awt.Color(102, 102, 102));
-        botaoAjuda.setText("Ajuda");
-        botaoAjuda.setBorder(null);
-        botaoAjuda.setBorderPainted(false);
-        botaoAjuda.setContentAreaFilled(false);
-        botaoAjuda.setFocusPainted(false);
-        botaoAjuda.setFocusable(false);
-
-        botaoInstrucoes.setForeground(new java.awt.Color(102, 102, 102));
-        botaoInstrucoes.setText("Instruções");
-        botaoInstrucoes.setBorder(null);
-        botaoInstrucoes.setBorderPainted(false);
-        botaoInstrucoes.setContentAreaFilled(false);
-
-        botaoLocaisVacinacao.setForeground(new java.awt.Color(102, 102, 102));
-        botaoLocaisVacinacao.setText("Locais de vacinação");
-        botaoLocaisVacinacao.setBorder(null);
-        botaoLocaisVacinacao.setBorderPainted(false);
-        botaoLocaisVacinacao.setContentAreaFilled(false);
-
-        botaoCalendario.setForeground(new java.awt.Color(102, 102, 102));
-        botaoCalendario.setText("Calendário");
-        botaoCalendario.setBorderPainted(false);
-        botaoCalendario.setContentAreaFilled(false);
-
         jdpFundo.setLayer(jbtOnde, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jdpFundo.setLayer(jbtEfic, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jdpFundo.setLayer(jbtEfei, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -146,10 +118,6 @@ public class Instrucoes extends javax.swing.JFrame {
         jdpFundo.setLayer(jlbSaibaTudo, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jdpFundo.setLayer(jLabel4, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jdpFundo.setLayer(BotaoSair, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jdpFundo.setLayer(botaoAjuda, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jdpFundo.setLayer(botaoInstrucoes, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jdpFundo.setLayer(botaoLocaisVacinacao, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jdpFundo.setLayer(botaoCalendario, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jdpFundoLayout = new javax.swing.GroupLayout(jdpFundo);
         jdpFundo.setLayout(jdpFundoLayout);
@@ -158,54 +126,42 @@ public class Instrucoes extends javax.swing.JFrame {
             .addGroup(jdpFundoLayout.createSequentialGroup()
                 .addGap(56, 56, 56)
                 .addGroup(jdpFundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jbtGrup)
+                    .addComponent(jbtOnde, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jdpFundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jdpFundoLayout.createSequentialGroup()
-                        .addGroup(jdpFundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jbtGrup)
-                            .addComponent(jbtOnde, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jdpFundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jdpFundoLayout.createSequentialGroup()
-                                .addComponent(jbtCalen)
-                                .addGap(18, 18, 18)
-                                .addComponent(jbtLevarLocal))
-                            .addGroup(jdpFundoLayout.createSequentialGroup()
-                                .addComponent(jbtEfic)
-                                .addGap(18, 18, 18)
-                                .addComponent(jbtEfei))))
-                    .addComponent(jlbSaibaTudo))
+                        .addComponent(jbtCalen)
+                        .addGap(18, 18, 18)
+                        .addComponent(jbtLevarLocal))
+                    .addGroup(jdpFundoLayout.createSequentialGroup()
+                        .addComponent(jbtEfic)
+                        .addGap(18, 18, 18)
+                        .addComponent(jbtEfei)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jdpFundoLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jdpFundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jdpFundoLayout.createSequentialGroup()
-                        .addComponent(botaoCalendario, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(21, 21, 21)
-                        .addComponent(botaoLocaisVacinacao)
-                        .addGap(21, 21, 21)
-                        .addComponent(botaoInstrucoes)
-                        .addGap(21, 21, 21)
-                        .addComponent(botaoAjuda)
-                        .addGap(295, 295, 295)
-                        .addComponent(BotaoSair, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jdpFundoLayout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addGap(79, 79, 79))))
+                .addContainerGap(622, Short.MAX_VALUE)
+                .addComponent(jLabel4)
+                .addGap(79, 79, 79))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jdpFundoLayout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(jlbSaibaTudo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(BotaoSair, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26))
         );
         jdpFundoLayout.setVerticalGroup(
             jdpFundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jdpFundoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jdpFundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(BotaoSair, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jdpFundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(botaoAjuda)
-                        .addComponent(botaoInstrucoes)
-                        .addComponent(botaoLocaisVacinacao, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(botaoCalendario, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jlbSaibaTudo)
-                .addGap(18, 18, 18)
+                .addGroup(jdpFundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jdpFundoLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(BotaoSair, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jdpFundoLayout.createSequentialGroup()
+                        .addContainerGap(34, Short.MAX_VALUE)
+                        .addComponent(jlbSaibaTudo)
+                        .addGap(31, 31, 31)))
                 .addGroup(jdpFundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jdpFundoLayout.createSequentialGroup()
                         .addComponent(jbtEfei)
@@ -258,6 +214,7 @@ public class Instrucoes extends javax.swing.JFrame {
 
     private void jbtOndeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtOndeActionPerformed
         // mapa
+          JOptionPane.showMessageDialog(this ,"Esta parte da aplicaçao nao foi finalizada sera uma implementação futura");
     }//GEN-LAST:event_jbtOndeActionPerformed
 
     private void jbtGrupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtGrupActionPerformed
@@ -319,10 +276,6 @@ public class Instrucoes extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotaoSair;
-    private javax.swing.JButton botaoAjuda;
-    private javax.swing.JButton botaoCalendario;
-    private javax.swing.JButton botaoInstrucoes;
-    private javax.swing.JButton botaoLocaisVacinacao;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JButton jbtCalen;
     private javax.swing.JButton jbtEfei;
