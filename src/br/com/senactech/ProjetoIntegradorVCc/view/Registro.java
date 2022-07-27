@@ -319,6 +319,14 @@ public class Registro extends javax.swing.JFrame {
                 u.setCpf(jtfCpf.getText());
                 try {
                     uServicos.cadUsuario(u);
+                    jtfNome.setText("");
+                    jtfEmail.setText("");
+                    jtfSenha.setText("");
+                    jtfEndereco.setText("");
+                    jtfTelefone.setText("");
+                    jtfCep.setText("");
+                    jtfCpf.setText("");
+                    jtfNome.requestFocus();
                 } catch (SQLException ex) {
                     Logger.getLogger(Registro.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -345,6 +353,17 @@ public class Registro extends javax.swing.JFrame {
         }
 
     } // FIM METODO INCRIPITAR SENHA
+
+    public void Limpar() {
+        jtfNome.setText("");
+        jtfEmail.setText("");
+        jtfSenha.setText("");
+        jtfEndereco.setText("");
+        jtfTelefone.setText("");
+        jtfCep.setText("");
+        jtfCpf.setText("");
+        jtfNome.requestFocus();
+    }
 
     public Boolean validaInputs() {
         //String email = jtfEmail.getText();
@@ -374,33 +393,30 @@ public class Registro extends javax.swing.JFrame {
             return false;
         }
 
-//        if (btnClick.getText() == "Registrar") {
-//
-//            try {
-//                if (usuarioS.verEmail(jtfEmail.getText())) {
-//                    JOptionPane.showMessageDialog(this,
-//                            "Email já cadastrado, registre-se com outro email Por Favor!!!",
-//                            ".: Erro :.", JOptionPane.ERROR_MESSAGE);
-//                    jtfEmail.requestFocus();
-//                    return false;
-//                } else try {
-//
-//                    //validação para nao ter 2 emails iguais cadastrados
-//                    if (usuarioS.verCPF(jtfCpf.getText())) {
-//                        JOptionPane.showMessageDialog(this,
-//                                "CPF já cadastrado!!!",
-//                                ".: Erro :.", JOptionPane.ERROR_MESSAGE);
-//                        jtfCpf.requestFocus();
-//                        return false;
-//                    }
-//                } catch (SQLException ex) {
-//                    Logger.getLogger(Registro.class.getName()).log(Level.SEVERE, null, ex);
-//                }
-//            } catch (SQLException ex) {
-//                Logger.getLogger(Registro.class.getName()).log(Level.SEVERE, null, ex);
-//            }
-//
-//        }
+        try {
+            if (usuarioS.verCPF(jtfCpf.getText())) {
+                JOptionPane.showMessageDialog(this,
+                        "CPF Já cadastrado!!!",
+                        " .: Erro :.", JOptionPane.ERROR_MESSAGE);
+                jtfCpf.requestFocus();
+                return false;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Registro.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        try {
+            if (usuarioS.verEmail(jtfEmail.getText())) {
+                JOptionPane.showMessageDialog(this,
+                        "E-mail Já cadastrado ou incorreto !!!",
+                        " .: Erro :. ", JOptionPane.ERROR_MESSAGE);
+                jtfEmail.requestFocus();
+                return false;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Registro.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
         return true;
     }
 

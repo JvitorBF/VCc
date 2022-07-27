@@ -130,12 +130,10 @@ public class UsuarioDAO {
     public boolean verCPF(String cpf) throws SQLException { //EU CRIEI ESTE METODO PARA USAR NO VALIDA INPUTS
         Connection con = Conexao.getConnection();                      //PARA O USUARIO NAO SE CADASTRAR COM 2 CPF IGUAIS 
         Statement stmt = con.createStatement();
-
         boolean vercpf = false;
-
         try {
             String sql;
-            sql = "select cpf from usuario where cpf ' " + cpf + " ' ";
+            sql = "select cpf from usuario where cpf = '" + cpf + "'";
             ResultSet rs = stmt.executeQuery(sql);
             while (rs.next()) {
                 vercpf = !rs.wasNull();
