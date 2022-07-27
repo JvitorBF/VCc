@@ -5,6 +5,8 @@
  */
 package br.com.senactech.ProjetoIntegradorVCc.view;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author faria
@@ -120,6 +122,11 @@ public class GruposPrioritarios extends javax.swing.JFrame {
         jButton10.setText("Calendário");
         jButton10.setBorderPainted(false);
         jButton10.setContentAreaFilled(false);
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
 
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
@@ -218,11 +225,16 @@ public class GruposPrioritarios extends javax.swing.JFrame {
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
-        System.out.println("FOi");
+       JOptionPane.showMessageDialog(this ,"Esta parte da aplicaçao nao foi finalizada sera uma implementação futura");
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
+       JOptionPane.showMessageDialog(this ,
+    "SE VOCÊ ESTA TENDO ALGUM PROBLEMA COM A APLICAÇÃO.\n" +
+    " OU ESTA PRECISANDO DE AJUDA POR FAVOR ENTRE EM CONTATO NO E-MAIL ABAIXO PARA QUE POSSAMOS AJUDAR COM,\n" +
+    " QUALQUER PROBLEMA OU BUG   || jvitorbf35@gmail.com || ");
+                
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -231,6 +243,14 @@ public class GruposPrioritarios extends javax.swing.JFrame {
         i.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        // TODO add your handling code here:
+        JCalendar cal = new JCalendar();
+        this.setVisible(false);
+        cal.setVisible(true);
+        cal.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jButton10ActionPerformed
 
     /**
      * @param args the command line arguments

@@ -5,6 +5,8 @@
  */
 package br.com.senactech.ProjetoIntegradorVCc.view;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author faria
@@ -100,6 +102,11 @@ public class Eficacia extends javax.swing.JFrame {
         botaoLocaisVacinacao.setBorder(null);
         botaoLocaisVacinacao.setBorderPainted(false);
         botaoLocaisVacinacao.setContentAreaFilled(false);
+        botaoLocaisVacinacao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoLocaisVacinacaoActionPerformed(evt);
+            }
+        });
 
         botaoInstrucoes.setForeground(new java.awt.Color(102, 102, 102));
         botaoInstrucoes.setText("Instruções");
@@ -116,6 +123,11 @@ public class Eficacia extends javax.swing.JFrame {
         botaoCalendario.setText("Calendário");
         botaoCalendario.setBorderPainted(false);
         botaoCalendario.setContentAreaFilled(false);
+        botaoCalendario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoCalendarioActionPerformed(evt);
+            }
+        });
 
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
@@ -207,10 +219,18 @@ public class Eficacia extends javax.swing.JFrame {
 
     private void botaoInstrucoesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoInstrucoesActionPerformed
         // TODO add your handling code here:
+        Instrucoes ef = new Instrucoes();
+        this.setVisible(false);
+        ef.setVisible(true);
+        ef.setLocationRelativeTo(null);
     }//GEN-LAST:event_botaoInstrucoesActionPerformed
 
     private void botaoAjudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoAjudaActionPerformed
         // TODO add your handling code here:
+        JOptionPane.showMessageDialog(this,
+                "SE VOCÊ ESTA TENDO ALGUM PROBLEMA COM A APLICAÇÃO.\n"
+                + " OU ESTA PRECISANDO DE AJUDA POR FAVOR ENTRE EM CONTATO NO E-MAIL ABAIXO PARA QUE POSSAMOS AJUDAR COM,\n"
+                + " QUALQUER PROBLEMA OU BUG   || jvitorbf35@gmail.com || ");
 
     }//GEN-LAST:event_botaoAjudaActionPerformed
 
@@ -220,6 +240,19 @@ public class Eficacia extends javax.swing.JFrame {
         i.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_BotaoVoltarActionPerformed
+
+    private void botaoCalendarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCalendarioActionPerformed
+        // TODO add your handling code here:
+        JCalendar cal = new JCalendar();
+        this.setVisible(false);
+        cal.setVisible(true);
+        cal.setLocationRelativeTo(null);
+    }//GEN-LAST:event_botaoCalendarioActionPerformed
+
+    private void botaoLocaisVacinacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoLocaisVacinacaoActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(this ,"Esta parte da aplicaçao nao foi finalizada sera uma implementação futura");
+    }//GEN-LAST:event_botaoLocaisVacinacaoActionPerformed
 
     /**
      * @param args the command line arguments
