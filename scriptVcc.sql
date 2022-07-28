@@ -1,5 +1,3 @@
-# create schema devm211vcc;
-
 -- CUIDADO AO EXECUTAR O SCRIPT 
 
 /*só executem todo ele quando for a primeira vez. Para isso tire o comentário
@@ -20,15 +18,7 @@ em que alguém for executar o script, ele estará desatualizado.*/
 # 'DROP TABLE nome_tabela' = exclui a tabela inteira
 # 'DELETE from nome_tabela' = assim eclui todas as linhas da tabela
 
-/*private int idUsuario;
-    private boolean status;
-    private String endereco;
-    private String nome;
-    private String telefone;
-    private String email;
-    private String cep;
-    private String cpf;
-    private String senha;*/
+-- create schema devm211vcc;
 
 use devm211vcc;
 
