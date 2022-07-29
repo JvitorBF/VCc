@@ -44,4 +44,5 @@ INSERT INTO usuario (id, nome, telefone, email, cpf, cep, endereco, senha) VALUE
 	 'E99A18C428CB38D5F260853678922E03' 
  );
 
+-- senha: abc123
 
