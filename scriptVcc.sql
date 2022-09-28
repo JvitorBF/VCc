@@ -38,9 +38,9 @@ INSERT INTO usuario (id, nome, telefone, email, cpf, cep, endereco, senha) VALUE
 	'JOÃO VITOR FLORIANO BARBOSA',
 	 '(51)99991-9750',
 	 'jvitorbf35@gmail.com',
-	 '053.804.190-03',
-	 '92990000',
-	 'Rua João Batista Conzatti 459',
+	 '398.386.860-69',
+	 '01153000',
+	 'Av Maranhão 612',
 	 'E99A18C428CB38D5F260853678922E03' 
  );
 
